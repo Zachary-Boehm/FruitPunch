@@ -29,4 +29,15 @@ public class Health : MonoBehaviour
       //Return true because the damage logic has passed.
       return true;
     }
+
+    //This method will take in the damage type and apply it to the target object(this).
+    private bool DamageEffect(int damageType)
+    {
+      //do logic to apply damage affect.
+      return false; //Method is not implemented yet
+    }
+
+    //Variable that acts as a getter and setter for the health variable
+    public float HeathAccessor{get{return health;} set{health = value;}}
+
 }

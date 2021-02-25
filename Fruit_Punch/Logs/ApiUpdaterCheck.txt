@@ -18,3 +18,53 @@ C# parse time         : 136ms
 candidates check time : 18ms
 console write time    : 0ms
 
+[api-updater (non-obsolete-error-filter)] 2/25/2021 4:40:03 PM : Starting C:/Users/dorkd/Documents/Unity Projects/2020.2.3f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 193.0432ms
+moved types parse time: 44ms
+candidates parse time : 7ms
+C# parse time         : 175ms
+candidates check time : 36ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/25/2021 4:40:29 PM : Starting C:/Users/dorkd/Documents/Unity Projects/2020.2.3f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 61.014ms
+moved types parse time: 43ms
+candidates parse time : 2ms
+C# parse time         : 143ms
+candidates check time : 34ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/25/2021 5:13:32 PM : Starting C:/Users/dorkd/Documents/Unity Projects/2020.2.3f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 61.8239ms
+moved types parse time: 45ms
+candidates parse time : 2ms
+C# parse time         : 153ms
+candidates check time : 33ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/25/2021 5:13:42 PM : Starting C:/Users/dorkd/Documents/Unity Projects/2020.2.3f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 58.0127ms
+moved types parse time: 42ms
+candidates parse time : 2ms
+C# parse time         : 148ms
+candidates check time : 32ms
+console write time    : 0ms
+
+[api-updater (non-obsolete-error-filter)] 2/25/2021 5:13:55 PM : Starting C:/Users/dorkd/Documents/Unity Projects/2020.2.3f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 58.014ms
+moved types parse time: 42ms
+candidates parse time : 2ms
+C# parse time         : 148ms
+candidates check time : 32ms
+console write time    : 0ms
+
