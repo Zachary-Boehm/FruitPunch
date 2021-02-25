@@ -18,7 +18,9 @@ public class Attack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D Target) {
       //Check to see if object is a valid target.
       if(Target.tag == "Player" || Target.tag == "Enemy" && Target.isTrigger == true){
-        DealDamage(Target.gameObject);
+        if(this.tag != Target.tag){
+          DealDamage(Target.gameObject);
+        }
       }
     }
 
