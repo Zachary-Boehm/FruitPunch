@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
         //Set the current health to the new health
         health = newHealth;
       }
+      DamageAffect(_damageType);
       //Return true because the damage logic has passed.
       return true;
     }
