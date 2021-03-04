@@ -5,9 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(StaticVariables))]
 public class Health : MonoBehaviour
 {
-    [Header("Constants")]
+    [Header("Variables")]
     [SerializeField]private float health; //Current health of the object
 
+    [Header("References")]
     [SerializeField]private StaticVariables Variables;
     private void Start() {
       health = GetComponent<StaticVariables>().health;//Set the health to the default health in the variables script

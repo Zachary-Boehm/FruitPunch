@@ -9,10 +9,11 @@ public class Movement : MonoBehaviour
 {
   [Header("Player Attributes")]
   [SerializeField] private Vector2 Velocity; //Velocity based on input
-  [SerializeField] private Transform Transform; //Reference to the players transform
-  [SerializeField]private Rigidbody2D PlayerRigidBody;//Reference to the Rigid body of the player
+ 
   [Header("Player Constants")]
   [SerializeField] private StaticVariables Variables;
+   [SerializeField] private Transform Transform; //Reference to the players transform
+  [SerializeField]private Rigidbody2D PlayerRigidBody;//Reference to the Rigid body of the player
   
   private void Awake() {
     Velocity = Vector2.zero; //Initialize the Velocity to (0,0)
