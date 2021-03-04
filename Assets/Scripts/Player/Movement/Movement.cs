@@ -4,6 +4,7 @@ using UnityEngine;
 
 //This script requires there to be a rigid body for it to work
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(StaticVariables))]
 public class Movement : MonoBehaviour
 {
   [Header("Player Attributes")]
@@ -11,7 +12,7 @@ public class Movement : MonoBehaviour
   [SerializeField] private Transform Transform; //Reference to the players transform
   [SerializeField]private Rigidbody2D PlayerRigidBody;//Reference to the Rigid body of the player
   [Header("Player Constants")]
-  [SerializeField] private float Speed; //Speed at which the player will move
+  [SerializeField] private StaticVariables Variables;
   
   private void Awake() {
     Velocity = Vector2.zero; //Initialize the Velocity to (0,0)
@@ -22,9 +23,9 @@ public class Movement : MonoBehaviour
   private void Update() {
     //inputs
     //Set the X of Velocity to the horizontal input * speed
-    Velocity.x = Input.GetAxisRaw("Horizontal") * Speed;
+    Velocity.x = Input.GetAxisRaw("Horizontal") * Variables.moveSpeed;
     //Set the Y of Velocity to the vertical input * speed
-    Velocity.y = Input.GetAxisRaw("Vertical") * Speed;
+    Velocity.y = Input.GetAxisRaw("Vertical") * Variables.moveSpeed;
   }
 
   private void FixedUpdate() {

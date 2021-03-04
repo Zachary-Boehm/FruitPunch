@@ -28,7 +28,7 @@ public class Attack : MonoBehaviour
     public void DealDamage(GameObject target){
       if(target.GetComponent<Health>() && Weapon){
         //Call the Damage method on the Health script attached to target and pass values from damage script on this object
-        target.GetComponent<Health>().Damage(Weapon.getDamageAmount(), Weapon.getDamageType());
+        target.GetComponent<Health>().Damage(Weapon);
       }else{
         //Debug statement to say that there is something missing for the logic to work
         Debug.Log("Target is missing the \"Health\" Script or the \"" + this.name + "\" object is missing a \"Weapon\" ScriptableObject");
