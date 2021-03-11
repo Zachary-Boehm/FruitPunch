@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class Attack : MonoBehaviour
 {
+    private bool canAttack = false;
+    [SerializeField]private LayerMask TargetLayer;
     private void Start() {
       GetComponent<BoxCollider2D>().isTrigger = true;
       Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -15,18 +17,26 @@ public class Attack : MonoBehaviour
 
     [SerializeField]private Weapon Weapon;//The gameobject weapon of this object. It will hold the damage Script
     //This method check for a collision with a collider and will check for a valid object to damage
-    private void OnTriggerEnter2D(Collider2D Target) {
-      //Check to see if object is a valid target.
-      if(Target.tag == "Player" || Target.tag == "Enemy" && Target.isTrigger == true){
-        if(this.tag != Target.tag){
-          DealDamage(Target.gameObject);
+    private void Update() 
+    {
+      if(true)
+      {
+        //Do a ray cast and store the collisions in the hit variable
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.left), 10, TargetLayer);
+        //if hit is not null
+        if(hit)
+        {
+          Debug.Log("Hit:" + hit.collider.name);
+          canAttack = false;
         }
       }
     }
 
     //This method will apply the damage from the damage script to the target object
-    public void DealDamage(GameObject target){
-      if(target.GetComponent<Health>() && Weapon){
+    public void DealDamage(GameObject target)
+    {
+      if(target.GetComponent<Health>() && Weapon)
+      {
         //Call the Damage method on the Health script attached to target and pass values from damage script on this object
         target.GetComponent<Health>().Damage(Weapon);
       }else{
