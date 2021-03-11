@@ -31,4 +31,29 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
         }
     }
+
+    public void enterSettings()
+    {
+
+        StartCoroutine(LoadSettings());
+    }
+
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForEndOfFrame();
+        SceneManager.LoadScene(3);
+    }
+
+    public void goToMain()
+    {
+
+        StartCoroutine(LoadMain());
+    }
+
+    IEnumerator LoadMain()
+    {
+        yield return new WaitForEndOfFrame();
+        SceneManager.LoadScene(0);
+    }
 }
