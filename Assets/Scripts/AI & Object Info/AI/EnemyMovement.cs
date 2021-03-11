@@ -10,8 +10,7 @@ public class EnemyMovement : MonoBehaviour
     int MinDist = 5;
 
 
-
-
+    Vector3 movement = Vector3.zero;
     void Start()
     {
 
@@ -19,20 +18,16 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(Player);
-
         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         {
-
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
-
-
-
-            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
-            {
-                //Here Call any function U want Like Shoot at here or something
-            }
-
+          movement = (Player.position - transform.position).normalized * MoveSpeed * Time.deltaTime;
+          movement.z = 0;
+        }else
+        {
+          movement = Vector3.zero;
         }
+    }
+    private void FixedUpdate() {
+      transform.position += movement;
     }
 }
