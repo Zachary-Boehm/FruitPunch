@@ -12,13 +12,13 @@ public class MainMenu : MonoBehaviour
 
     public void startGame(){
       
-      StartCoroutine(LoadScene());
+      StartCoroutine(LoadScene(0));
     }
 
-    IEnumerator LoadScene()
+    IEnumerator LoadScene(int scene)
     {
       yield return new WaitForEndOfFrame();
-      SceneManager.LoadScene(1);
+      SceneManager.LoadScene(scene);
     }
 
     public void exitGame()
@@ -35,25 +35,12 @@ public class MainMenu : MonoBehaviour
     public void enterSettings()
     {
 
-        StartCoroutine(LoadSettings());
-    }
-
-
-    IEnumerator LoadScene()
-    {
-        yield return new WaitForEndOfFrame();
-        SceneManager.LoadScene(3);
+        StartCoroutine(LoadScene(3));
     }
 
     public void goToMain()
     {
 
-        StartCoroutine(LoadMain());
-    }
-
-    IEnumerator LoadMain()
-    {
-        yield return new WaitForEndOfFrame();
-        SceneManager.LoadScene(0);
+        StartCoroutine(LoadScene(0));
     }
 }
