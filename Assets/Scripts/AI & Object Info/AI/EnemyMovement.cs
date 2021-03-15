@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform Player;
-    int MoveSpeed = 4;
+    int MoveSpeed = 30;
     int MaxDist = 10;
     int MinDist = 5;
 
@@ -22,7 +22,8 @@ public class EnemyMovement : MonoBehaviour
         {
           movement = (Player.position - transform.position).normalized * MoveSpeed * Time.deltaTime;
           movement.z = 0;
-        }else
+        }
+        else
         {
           movement = Vector3.zero;
         }
