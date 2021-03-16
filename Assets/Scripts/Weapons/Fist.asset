@@ -17,4 +17,4 @@ MonoBehaviour:
   BleedAmount: 0
   damage: 5
   attackDuration: 1
-  attackRange: 20
+  attackRange: 7
