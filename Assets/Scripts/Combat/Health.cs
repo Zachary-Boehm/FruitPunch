@@ -11,7 +11,8 @@ public class Health : MonoBehaviour
     [Header("References")]
     [SerializeField]private StaticVariables Variables;
     private void Start() {
-      health = GetComponent<StaticVariables>().health;//Set the health to the default health in the variables script
+      Variables = GetComponent<StaticVariables>(); //Variables that this object needs
+      health = Variables.health;//Set the health to the default health in the variables script
     }
 
     /*

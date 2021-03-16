@@ -16,18 +16,25 @@ public class Attack : MonoBehaviour
     }
 
     [SerializeField]private Weapon Weapon;//The gameobject weapon of this object. It will hold the damage Script
-    //This method check for a collision with a collider and will check for a valid object to damage
+    
+    //this method when called will begin an attack
+    public void AttackTarget(){
+      StartCoroutine(AttackTimer(Weapon.getAttackDuration())); //Begin the attack timer
+      canAttack = true; //Allow the attack to begin
+    }
     private void Update() 
     {
-      if(true)
+      if(canAttack)
       {
+        //!get the direction of the players movement then apply that to the direction
         //Do a ray cast and store the collisions in the hit variable
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.left), 10, TargetLayer);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), Weapon.getAttackRange(), TargetLayer);
+        Debug.Log(hit.distance);
         //if hit is not null
         if(hit)
         {
-          Debug.Log("Hit:" + hit.collider.name);
-          canAttack = false;
+          DealDamage(hit.collider.gameObject);//Deal damage to the hit target
+          canAttack = false;//The attack is now finished
         }
       }
     }
@@ -43,6 +50,13 @@ public class Attack : MonoBehaviour
         //Debug statement to say that there is something missing for the logic to work
         Debug.Log("Target is missing the \"Health\" Script or the \"" + this.name + "\" object is missing a \"Weapon\" ScriptableObject");
       }
-      
+    }
+
+    //This coroutine is a timer for the attacks
+    //If the timer is done before the attack hits something the attack will finish
+    IEnumerator AttackTimer(float duration)
+    {
+      yield return new WaitForSeconds(duration); //wait for duration of attack
+      canAttack = false; //Make it so attacks are not active
     }
 }

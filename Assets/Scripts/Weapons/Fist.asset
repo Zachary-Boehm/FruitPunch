@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Fist
   m_EditorClassIdentifier: 
   DamageAffect: 2
-  damage: 5
   EffectDuration: 0.5
   BleedAmount: 0
+  damage: 5
+  attackDuration: 1
+  attackRange: 20
