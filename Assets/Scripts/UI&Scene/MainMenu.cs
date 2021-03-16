@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void startGame(){
       
-      StartCoroutine(LoadScene(0));
+      StartCoroutine(LoadScene(1));
     }
 
     IEnumerator LoadScene(int scene)

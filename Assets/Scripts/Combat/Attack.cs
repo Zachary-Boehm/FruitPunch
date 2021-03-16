@@ -9,7 +9,6 @@ public class Attack : MonoBehaviour
     private bool canAttack = false;
     [SerializeField]private LayerMask TargetLayer;
     private void Start() {
-      GetComponent<BoxCollider2D>().isTrigger = true;
       Rigidbody2D rb = GetComponent<Rigidbody2D>();
       rb.freezeRotation = true;
       rb.gravityScale = 0;
@@ -26,7 +25,7 @@ public class Attack : MonoBehaviour
     {
       if(canAttack)
       {
-        //!get the direction of the players movement then apply that to the direction
+        //!Get the direction of the player's movement, then apply that to the direction of attack
         //Do a ray cast and store the collisions in the hit variable
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), Weapon.getAttackRange(), TargetLayer);
         Debug.Log(hit.distance);
