@@ -96,12 +96,13 @@ GameObject:
   - component: {fileID: 8323302229840780604}
   - component: {fileID: 8323302229840780601}
   - component: {fileID: 8323302229840780605}
+  - component: {fileID: 8323302229840780596}
   - component: {fileID: 8323302229840780598}
   - component: {fileID: 8323302229840780599}
   - component: {fileID: 8323302229840780594}
-  - component: {fileID: 8323302229840780596}
   - component: {fileID: 8323302229840780597}
   - component: {fileID: 8323302229840780600}
+  - component: {fileID: 7288569245300100879}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -238,6 +239,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 1.5409048}
   serializedVersion: 2
   m_Radius: 2.045254
+--- !u!95 &8323302229840780596
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323302229840780607}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e023955ef1b68c843ae99b21bac227c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8323302229840780598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +288,7 @@ MonoBehaviour:
   defaultHealth: 10
   moveSpeed: 550
   health: 10
+  Direction: {x: 0, y: 0}
 --- !u!114 &8323302229840780594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,25 +301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe4607982e5cd84d965fa0bead63a45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &8323302229840780596
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323302229840780607}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e023955ef1b68c843ae99b21bac227c4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8323302229840780597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +317,7 @@ MonoBehaviour:
   Variables: {fileID: 8323302229840780599}
   Transform: {fileID: 0}
   PlayerRigidBody: {fileID: 0}
+  direction: {x: 0, y: 0}
 --- !u!114 &8323302229840780600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,3 +334,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   Weapon: {fileID: 11400000, guid: 7ed0be58459ec9f41b00d2be3742b14d, type: 2}
+--- !u!114 &7288569245300100879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323302229840780607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e667cba62340a448a1008232a2f0cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldDir: {x: 0, y: 0}
+  newDir: {x: 0, y: 0}
+  animator: {fileID: 0}
+  flipMode: 1

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a360964ba7e77745ba695bbd376f5fe, type: 3}
   m_Name: Fist
   m_EditorClassIdentifier: 
-  DamageAffect: 2
+  DamageAffect: 0
   EffectDuration: 0.5
   BleedAmount: 0
   damage: 5
