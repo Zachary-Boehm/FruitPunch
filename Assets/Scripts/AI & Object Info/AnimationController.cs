@@ -35,7 +35,6 @@ public class AnimationController : MonoBehaviour
           }
           if(newDir.x == 0 && newDir.y != 0)
           {
-            Debug.Log("Vertical Movement");
             if(Variables.AttackDirection.x < 0){
               spriteRend.flipX = flipMode;
               ChangeAnim(1); //walk left
