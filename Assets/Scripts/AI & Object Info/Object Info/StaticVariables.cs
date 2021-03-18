@@ -11,6 +11,9 @@ public class StaticVariables : MonoBehaviour
     public float moveSpeed;
     public float health;
 
+    public Vector2 Direction;
+    public Vector2 AttackDirection;
+
     public void ResetSpeed()
     {
       moveSpeed = defaultSpeed;

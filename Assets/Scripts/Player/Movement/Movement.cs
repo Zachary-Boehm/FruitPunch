@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
   [SerializeField] private StaticVariables Variables;
    [SerializeField] private Transform Transform; //Reference to the players transform
   [SerializeField]private Rigidbody2D PlayerRigidBody;//Reference to the Rigid body of the player
-  
+  [SerializeField] private Vector2 direction;//direction the player is moving in
   private void Awake() {
     Velocity = Vector2.zero; //Initialize the Velocity to (0,0)
     Transform = GetComponent<Transform>();//Initialize to transform of player
@@ -27,6 +27,12 @@ public class Movement : MonoBehaviour
     Velocity.x = Input.GetAxisRaw("Horizontal") * Variables.moveSpeed;
     //Set the Y of Velocity to the vertical input * speed
     Velocity.y = Input.GetAxisRaw("Vertical") * Variables.moveSpeed;
+    //!Optimize Here
+    direction = Velocity.normalized;
+    Variables.Direction = direction;
+    if(direction.x != 0){
+      Variables.AttackDirection = direction;
+    }
   }
 
   private void FixedUpdate() {

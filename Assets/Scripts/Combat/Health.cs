@@ -43,7 +43,6 @@ public class Health : MonoBehaviour
       //Checks for valid input of Damage Type
       if(_weapon != null){
         if(_weapon.getDamageType() > 0 || _weapon.getDamageType() < 4){
-          Debug.Log("dealing affect");
           DamageAffect(_weapon);//call the logic for the effect since the type is vaild
         }
       }

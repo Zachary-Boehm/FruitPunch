@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator LoadScene(int scene)
     {
-      yield return new WaitForEndOfFrame();
+      yield return new WaitForSeconds(1f);
       SceneManager.LoadScene(scene);
     }
 

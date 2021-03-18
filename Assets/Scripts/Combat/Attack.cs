@@ -7,9 +7,11 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private bool canAttack = false;
+    private StaticVariables Variables;
     [SerializeField]private LayerMask TargetLayer;
     private void Start() {
       Rigidbody2D rb = GetComponent<Rigidbody2D>();
+      Variables = GetComponent<StaticVariables>();
       rb.freezeRotation = true;
       rb.gravityScale = 0;
     }
@@ -27,8 +29,7 @@ public class Attack : MonoBehaviour
       {
         //!Get the direction of the player's movement, then apply that to the direction of attack
         //Do a ray cast and store the collisions in the hit variable
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector3.right), Weapon.getAttackRange(), TargetLayer);
-        Debug.Log(hit.distance);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), Weapon.getAttackRange(), TargetLayer);
         //if hit is not null
         if(hit)
         {
