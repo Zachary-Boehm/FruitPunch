@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(StaticVariables))]
 public class Health : MonoBehaviour
@@ -10,9 +11,12 @@ public class Health : MonoBehaviour
 
     [Header("References")]
     [SerializeField]private StaticVariables Variables;
+    [SerializeField]private Slider HealthBar;
     private void Start() {
       Variables = GetComponent<StaticVariables>(); //Variables that this object needs
       health = Variables.health;//Set the health to the default health in the variables script
+      HealthBar.maxValue = health;
+      HealthBar.value = health;
     }
 
     /*
@@ -33,11 +37,14 @@ public class Health : MonoBehaviour
       if(newHealth <= 0){
         //Set health to 0
         health = 0;
+        
+        HealthBar.value = health;
         //Do logic for death
         Destroy(this.gameObject);
       }else{ //Else if the health is above 0
         //Set the current health to the new health
         health = newHealth;
+        HealthBar.value = health;
       }
       
       //Checks for valid input of Damage Type

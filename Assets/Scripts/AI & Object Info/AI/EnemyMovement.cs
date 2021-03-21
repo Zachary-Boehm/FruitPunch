@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Direction = (Player.position - transform.position).normalized;
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (Vector3.Distance(transform.position, Player.position) >= MinDist && !GetComponent<StaticVariables>().isAttacking)
         {
           movement =  Direction * MoveSpeed * Time.deltaTime;
           movement.z = 0;
