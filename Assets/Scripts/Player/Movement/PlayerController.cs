@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
   [SerializeField] private float chargeMultiplier;
   [SerializeField] private float chargeTime;
   private float chargeAmount = 0.0f;//percent of how much the player charged the attack
-  bool canMove = true;
+  //bool canMove = true;
 
   private void Awake() {
     Velocity = Vector2.zero; //Initialize the Velocity to (0,0)

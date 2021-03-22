@@ -11,12 +11,14 @@ public class Health : MonoBehaviour
 
     [Header("References")]
     [SerializeField]private StaticVariables Variables;
-    [SerializeField]private Slider HealthBar;
+    [SerializeField]private Slider HealthBar = null;
     private void Start() {
       Variables = GetComponent<StaticVariables>(); //Variables that this object needs
       health = Variables.health;//Set the health to the default health in the variables script
-      HealthBar.maxValue = health;
-      HealthBar.value = health;
+      if(HealthBar != null){
+        HealthBar.maxValue = health;
+        HealthBar.value = health;
+      }
     }
 
     /*
@@ -38,7 +40,9 @@ public class Health : MonoBehaviour
         //Set health to 0
         health = 0;
         
-        HealthBar.value = health;
+        if(HealthBar){ //Make sure that it has a health bar
+          HealthBar.value = health;
+        }
         //Do logic for death
         Destroy(this.gameObject);
       }else{ //Else if the health is above 0

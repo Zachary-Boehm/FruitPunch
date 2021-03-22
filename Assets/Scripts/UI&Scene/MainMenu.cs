@@ -22,14 +22,8 @@ public class MainMenu : MonoBehaviour
     }
 
     public void exitGame()
-    {   if (UnityEditor.EditorApplication.isPlaying == true)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
-            Application.Quit();
-        }
+    {   
+      Application.Quit();
     }
 
     public void enterSettings()

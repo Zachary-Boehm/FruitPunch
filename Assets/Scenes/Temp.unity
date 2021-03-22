@@ -472,7 +472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341005130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.98, y: -7.83, z: 0}
+  m_LocalPosition: {x: 48.3, y: -9.9, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1694,9 +1694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 1
+  defaultSpeed: 100
   defaultHealth: 1
-  moveSpeed: 1
+  moveSpeed: 100
   health: 1
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -1983,7 +1983,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 131.29999, y: 6.700012}
+  m_AnchoredPosition: {x: 131.29993, y: 6.7000732}
   m_SizeDelta: {x: 381.0574, y: 99.9259}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &960921719

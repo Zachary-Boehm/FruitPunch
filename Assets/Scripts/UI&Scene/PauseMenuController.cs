@@ -41,13 +41,6 @@ public class PauseMenuController : MonoBehaviour
     }
 
     public void quit(){
-       if (UnityEditor.EditorApplication.isPlaying == true)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
-            Application.Quit();
-        }
+      Application.Quit();
     }
 }
