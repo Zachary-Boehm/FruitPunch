@@ -15,6 +15,6 @@ MonoBehaviour:
   DamageAffect: 0
   EffectDuration: 0.5
   BleedAmount: 0
-  damage: 5
-  attackDuration: 1
+  damage: 1
+  attackDuration: 0.5
   attackRange: 7

@@ -13,6 +13,7 @@ public class StaticVariables : MonoBehaviour
 
     public Vector2 Direction;
     public Vector2 AttackDirection;
+    public bool isAttacking;
 
     public void ResetSpeed()
     {

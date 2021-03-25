@@ -1,7 +1,28 @@
 fileFormatVersion: 2
 guid: 22b1035af4e35ae408a31457eb6bff47
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8132839779064362837
+    second: Tomato Punch Spritesheet_0
+  - first:
+      213: -2539217991398963518
+    second: Tomato Punch Spritesheet_1
+  - first:
+      213: 6019676446157481804
+    second: Tomato Punch Spritesheet_2
+  - first:
+      213: -7976758174735397075
+    second: Tomato Punch Spritesheet_3
+  - first:
+      213: -5992793798244958662
+    second: Tomato Punch Spritesheet_4
+  - first:
+      213: -3069086566432488535
+    second: Tomato Punch Spritesheet_5
+  - first:
+      213: -5541853171347090603
+    second: Tomato Punch Spritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +110,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2000
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8c3b18f49522f80800000000000000
+      internalID: -8132839779064362837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2000
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6426fa0b2e2ccd0800000000000000
+      internalID: -2539217991398963518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2000
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47a00c85df2a8350800000000000000
+      internalID: 6019676446157481804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 2000
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f04b7e3bcdc4190800000000000000
+      internalID: -7976758174735397075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef17baac155dca0800000000000000
+      internalID: -5992793798244958662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a34ede470a6865d0800000000000000
+      internalID: -3069086566432488535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato Punch Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 3000
+        height: 2000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5531c7417e16713b0800000000000000
+      internalID: -5541853171347090603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -17,9 +17,10 @@ public class Attack : MonoBehaviour
     }
 
     [SerializeField]private Weapon Weapon;//The gameobject weapon of this object. It will hold the damage Script
-    
+    private float Multiplier = 1;
     //this method when called will begin an attack
-    public void AttackTarget(){
+    public void AttackTarget(float multiplier = 1){
+      Multiplier = multiplier;
       StartCoroutine(AttackTimer(Weapon.getAttackDuration())); //Begin the attack timer
       canAttack = true; //Allow the attack to begin
     }
@@ -45,7 +46,7 @@ public class Attack : MonoBehaviour
       if(target.GetComponent<Health>() && Weapon)
       {
         //Call the Damage method on the Health script attached to target and pass values from damage script on this object
-        target.GetComponent<Health>().Damage(Weapon);
+        target.GetComponent<Health>().Damage(Weapon, Weapon.getDamageAmount() * Multiplier);
       }else{
         //Debug statement to say that there is something missing for the logic to work
         Debug.Log("Target is missing the \"Health\" Script or the \"" + this.name + "\" object is missing a \"Weapon\" ScriptableObject");
