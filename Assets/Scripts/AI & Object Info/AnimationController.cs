@@ -11,13 +11,13 @@ public class AnimationController : MonoBehaviour
     [SerializeField] private string AnimLabel;//First part of animation labels
     private SpriteRenderer spriteRend; //Sprite renderer for object
     [SerializeField]private bool idling = true;
-    [SerializeField]private int currentAnim = 0; //Current animation for object
-    private StaticVariables Variables;
+    [SerializeField]private string currentAnim = "Idle"; //Current animation for object
+    private ActorVariables Variables;
     private void Start() {
       oldDir = Vector2.zero;
       animator = GetComponent<Animator>();
       spriteRend = GetComponent<SpriteRenderer>();
-      Variables = GetComponent<StaticVariables>();
+      Variables = GetComponent<ActorVariables>();
     }
     // Update is called once per frame
     void Update()
@@ -28,24 +28,24 @@ public class AnimationController : MonoBehaviour
           idling = false;
           if(newDir.x < 0){
             spriteRend.flipX = flipMode;
-            ChangeAnim(1); //walk left
+            ChangeAnim(SceneConstants.WalkAnim); //walk left
           }else if(newDir.x > 0){
             spriteRend.flipX = !flipMode;
-            ChangeAnim(2);//walk right
+            ChangeAnim(SceneConstants.WalkAnim);//walk right
           }
           if(newDir.x == 0 && newDir.y != 0)
           {
             if(Variables.AttackDirection.x < 0){
               spriteRend.flipX = flipMode;
-              ChangeAnim(1); //walk left
+              ChangeAnim(SceneConstants.WalkAnim); //walk left
             }else if(Variables.AttackDirection.x > 0){
               spriteRend.flipX = !flipMode;
-              ChangeAnim(2);//walk right
+              ChangeAnim(SceneConstants.WalkAnim);//walk right
             }
           }
           oldDir = newDir;
         }else if(oldDir.x == 0 && oldDir.y == 0 && !idling){
-          ChangeAnim(0);//idle
+          ChangeAnim(SceneConstants.IdleAnim);//idle
           if(oldDir.x > 0){ //right
             spriteRend.flipX = !flipMode;
           }else if( oldDir.x < 0){ //left
@@ -56,31 +56,17 @@ public class AnimationController : MonoBehaviour
       }
     }
 
-    public void ChangeAnim(int animation, string attackType = ""){
-      if(currentAnim != animation || animation == 3){
-        switch(animation){
-          case 0: //idle
-            animator.Play("Base Layer." + AnimLabel + "Idle", 0);
-          break;
-          case 1: //walk left
-            //invert the image
-            animator.Play("Base Layer." + AnimLabel + "Walk", 0);
-          break;
-          case 2://walk right
-            //make sure image is not inverted
-            animator.Play("Base Layer." + AnimLabel + "Walk", 0);
-          break;
-          case 3://attack charge
-            animator.Play("Base Layer." + AnimLabel + attackType, 0);
-          break;
-        }
+    public void ChangeAnim(string animation){
+      if(currentAnim != animation){
+        animator.Play("Base Layer." + AnimLabel + animation, 0);
         currentAnim = animation;
       }
       
     }
-    public void EndAttack(int animation){
-      ChangeAnim(animation);
-      oldDir = Vector2.zero;
-      Variables.isAttacking = false;
+    public void EndAnimation(string nextAnimation)
+    {
+        ChangeAnim(nextAnimation);
+        oldDir = Vector2.zero;
+        Variables.isAttacking = false;
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActorVariables : MonoBehaviour
+public class StaticVariables : MonoBehaviour
 {
     [Header("Default Values")]
     [SerializeField]private float defaultSpeed;

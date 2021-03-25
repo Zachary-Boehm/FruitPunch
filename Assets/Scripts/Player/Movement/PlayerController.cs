@@ -4,14 +4,14 @@ using UnityEngine;
 
 //This script requires there to be a rigid body for it to work
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(StaticVariables))]
+[RequireComponent(typeof(ActorVariables))]
 public class PlayerController : MonoBehaviour
 {
   [Header("Player Attributes")]
   [SerializeField] private Vector2 Velocity; //Velocity based on input
  
   [Header("Player Constants")]
-  [SerializeField] private StaticVariables Variables;
+  [SerializeField] private ActorVariables Variables;
    [SerializeField] private Transform Transform; //Reference to the players transform
   [SerializeField]private Rigidbody2D PlayerRigidBody;//Reference to the Rigid body of the player
   [SerializeField] private Vector2 direction;//direction the player is moving in
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
   IEnumerator chargeAttack()
   {
     Variables.isAttacking = true;
-    GetComponent<AnimationController>().ChangeAnim(3, "PunchCharge");
+    GetComponent<AnimationController>().ChangeAnim(SceneConstants.PunchChargeAnim);
     while(chargeAmount < 100)
     {
       yield return new WaitForSeconds(chargeTime/100);
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     if(mult < 1){//Damage will at least be 1
       mult = 1;
     }
-    GetComponent<AnimationController>().ChangeAnim(3, "PunchRelease");
+    GetComponent<AnimationController>().ChangeAnim(SceneConstants.PunchReleaseAnim);
     GetComponent<Attack>().AttackTarget(mult);//Send out the attack after the release
     chargeAmount = 0;//reset the charge
   }

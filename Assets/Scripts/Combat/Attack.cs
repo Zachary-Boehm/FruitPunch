@@ -7,11 +7,11 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private bool canAttack = false;
-    private StaticVariables Variables;
+    private ActorVariables Variables;
     [SerializeField]private LayerMask TargetLayer;
     private void Start() {
       Rigidbody2D rb = GetComponent<Rigidbody2D>();
-      Variables = GetComponent<StaticVariables>();
+      Variables = GetComponent<ActorVariables>();
       rb.freezeRotation = true;
       rb.gravityScale = 0;
     }
