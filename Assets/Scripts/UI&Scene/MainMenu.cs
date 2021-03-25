@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void startGame(){
       
-      StartCoroutine(LoadScene(1));
+      StartCoroutine(LoadScene((int)SceneName.Level_1));
     }
 
     IEnumerator LoadScene(int scene)
@@ -29,12 +29,12 @@ public class MainMenu : MonoBehaviour
     public void enterSettings()
     {
 
-        StartCoroutine(LoadScene(3));
+        StartCoroutine(LoadScene(4));
     }
 
     public void goToMain()
     {
 
-        StartCoroutine(LoadScene(0));
+        StartCoroutine(LoadScene((int)SceneName.MainMenu));
     }
 }

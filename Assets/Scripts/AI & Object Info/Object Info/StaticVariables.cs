@@ -23,4 +23,7 @@ public class StaticVariables : MonoBehaviour
     {
       health = defaultHealth;
     }
+    public float getDefaultHealth(){
+      return defaultHealth;
+    }
 }

@@ -29,11 +29,11 @@ public class PauseMenuController : MonoBehaviour
     }
 
     public void mainMenu(){
-      SceneManager.LoadScene(0);//Load The main menu
+      SceneManager.LoadScene((int)SceneName.MainMenu);//Load The main menu
     }
 
     public void settingsMenu(){
-      SceneManager.LoadScene(3);
+      SceneManager.LoadScene(4);
     }
 
     public void deselectButton(){

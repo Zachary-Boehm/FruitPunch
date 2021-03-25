@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
       Variables = GetComponent<StaticVariables>(); //Variables that this object needs
       health = Variables.health;//Set the health to the default health in the variables script
       if(HealthBar != null){
-        HealthBar.maxValue = health;
+        HealthBar.maxValue = Variables.getDefaultHealth();
         HealthBar.value = health;
       }
     }
