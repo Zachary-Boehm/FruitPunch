@@ -6,12 +6,28 @@ using UnityEngine.UI;
 public class TomatoHealthBar : MonoBehaviour
 {
     private Slider Health;
-    private void Awake() {
+    [SerializeField]private Image TomatoState;
+    [SerializeField]private Sprite[] TomatoStates;
+    private float good,damaged;
+    private void Start() {
       Health = GetComponent<Slider>();
+      good = .5f * Health.maxValue;
+      damaged = .15f * Health.maxValue;
+      Debug.Log(good);
+      Debug.Log(damaged);
     }
-    public void updateHealthImage(){
-      if(Health.value < (.5*Health.maxValue)){ //50% of health left
-        //Switch image
-      }
+    public void updateHealthImage()
+    {
+        if(Health.value > good){ //50% of health left
+            TomatoState.sprite = TomatoStates[0];
+        }
+        else if(Health.value <= good && Health.value > damaged)
+        {
+            TomatoState.sprite = TomatoStates[2];
+        }
+        else if(Health.value <= damaged)
+        {
+            TomatoState.sprite = TomatoStates[1];
+        }
     }
 }
