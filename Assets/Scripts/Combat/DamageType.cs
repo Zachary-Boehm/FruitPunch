@@ -6,6 +6,7 @@ public class DamageType : MonoBehaviour
   
 }
 
+[System.Serializable]
 public enum DamageAffect{
   Slow = 1, //Will slow target
   Stun = 2, //Will stun target

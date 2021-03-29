@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticVariables : MonoBehaviour
+public class ActorVariables : MonoBehaviour
 {
     [Header("Default Values")]
     [SerializeField]private float defaultSpeed;
@@ -22,5 +22,8 @@ public class StaticVariables : MonoBehaviour
     public void ResetHealth()
     {
       health = defaultHealth;
+    }
+    public float getDefaultHealth(){
+      return defaultHealth;
     }
 }

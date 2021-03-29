@@ -12,29 +12,33 @@ public class MainMenu : MonoBehaviour
 
     public void startGame(){
       
-      StartCoroutine(LoadScene(1));
+      StartCoroutine(LoadScene((int)SceneName.Level_1)); //Start coroutine to load in new scene
     }
 
+    //Coroutine that will load in new scene
     IEnumerator LoadScene(int scene)
     {
       yield return new WaitForSeconds(1f);
       SceneManager.LoadScene(scene);
     }
 
+    //Method will exit the game
     public void exitGame()
     {   
       Application.Quit();
     }
 
+    //Will open the settings menu
     public void enterSettings()
     {
 
-        StartCoroutine(LoadScene(3));
+        StartCoroutine(LoadScene(4));
     }
 
+    //return to main menu
     public void goToMain()
     {
 
-        StartCoroutine(LoadScene(0));
+        StartCoroutine(LoadScene((int)SceneName.MainMenu));
     }
 }
