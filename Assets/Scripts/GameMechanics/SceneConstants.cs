@@ -10,9 +10,11 @@ public static class SceneConstants
     static public string PunchChargeAnim = "PunchCharge";
     static public string PunchReleaseAnim = "PunchRelease";
 }
+
 public enum SceneName{
   PersistantData = 0,
   MainMenu = 1,
   LoadingScene = 2,
-  Level_1 = 3
+  Level_1 = 3,
+  settings = 4
 }

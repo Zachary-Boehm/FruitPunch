@@ -10,15 +10,16 @@ public class Parallax : MonoBehaviour
     [SerializeField] private Vector2 parallaxAmount;
     void Start()
     {
-        cameraTransform = Camera.main.transform;
-        lastCameraPosition = cameraTransform.position;
+        cameraTransform = Camera.main.transform; //Transform of the camera
+        lastCameraPosition = cameraTransform.position; //Last position of the camera
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
+        Vector3 deltaMovement = cameraTransform.position - lastCameraPosition; //Change in camera position
+        //Move object by change in camera position * amount of parallax
         transform.position += new Vector3(deltaMovement.x * parallaxAmount.x, deltaMovement.y * parallaxAmount.y, deltaMovement.z);
-        lastCameraPosition = cameraTransform.position;
+        lastCameraPosition = cameraTransform.position; //Update last camera position
     }
 }
