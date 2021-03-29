@@ -18,7 +18,7 @@ public class Attack : MonoBehaviour
     private float Multiplier = 1;//Damage multiplier
     private void Start() {
         //Grab the weapon information from the Game Manager
-        Weapon = GameObject.Find("Game Manager").GetComponent<GameManager>().getWeapons().weapons[(int)weaponType];
+        Weapon = GameManager.GAMEMANAGER.getWeapons().weapons[(int)weaponType];
         Rigidbody2D rb = GetComponent<Rigidbody2D>();//Reference to the objects rigid body
         Variables = GetComponent<ActorVariables>(); //Reference to the objects global variables
         rb.freezeRotation = true; //freeze the rotation of rigid body

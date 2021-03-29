@@ -33,9 +33,13 @@ public class MenuControls : MonoBehaviour
     //Will open the settings menu
     public void enterSettings()
     {
-        StartCoroutine(LoadScene(4));
+        GameManager.GAMEMANAGER.openSettings();
     }
-
+    //exit settins menu
+    public void exitSettings()
+    {
+        GameManager.GAMEMANAGER.closeSettings();
+    }
     //return to main menu
     public void goToMain()
     {

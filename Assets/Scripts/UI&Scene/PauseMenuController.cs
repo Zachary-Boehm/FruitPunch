@@ -36,7 +36,7 @@ public class PauseMenuController : MonoBehaviour
     //Go to settings menu
     public void settingsMenu()
     {
-        SceneManager.LoadScene(4);
+        GameManager.GAMEMANAGER.openSettings();
     }
 
     //This method will remove button from event system as selected button

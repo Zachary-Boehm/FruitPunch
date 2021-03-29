@@ -178,6 +178,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Persistant Data
       objectReference: {fileID: 0}
+    - target: {fileID: 562296243501768954, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: SettingsMenu
+      value: 
+      objectReference: {fileID: 596922615}
+    - target: {fileID: 2015888675509732882, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015888675509732882, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231705996382904798, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231705996382904798, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: exitSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 4231705996382904798, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5420624624621531102, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981276346208686331, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6618107571187571508, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -187,6 +219,11 @@ PrefabInstance:
 --- !u!4 &596922614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5040687253450613820, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+  m_PrefabInstance: {fileID: 596922613}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &596922615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5981276346208686331, guid: 536d07fda5949664e859e7c53f973662, type: 3}
   m_PrefabInstance: {fileID: 596922613}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &914135640
