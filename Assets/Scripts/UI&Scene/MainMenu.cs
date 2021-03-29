@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     //private IEnumerator Start() {
-      //yield return new WaitForSeconds(3.0f);
-      //SceneManager.LoadScene(1);
+    //yield return new WaitForSeconds(3.0f);
+    //SceneManager.LoadScene(1);
     //}
+
+    int volumeLevel = 5;
 
     public void startGame(){
       
@@ -31,14 +33,23 @@ public class MainMenu : MonoBehaviour
     //Will open the settings menu
     public void enterSettings()
     {
-
         StartCoroutine(LoadScene(4));
     }
 
     //return to main menu
     public void goToMain()
     {
-
         StartCoroutine(LoadScene((int)SceneName.MainMenu));
+    }
+
+
+    public void VolumeUp()
+    {
+        volumeLevel++;
+    }
+
+    public void volumeDown()
+    {
+        volumeLevel--;
     }
 }
