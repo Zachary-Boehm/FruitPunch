@@ -8,6 +8,8 @@ public class EnemyMovement : MonoBehaviour
     //int MaxDist = 10;
     int MinDist = 10;
     private ActorVariables Variables;
+    bool isChasing = false;
+    bool isAttacking = false;
 
     Vector3 movement = Vector3.zero;
     [SerializeField] private Vector2 Direction;
@@ -18,21 +20,31 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        Direction = (Player.position - transform.position).normalized;
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist && !GetComponent<ActorVariables>().isAttacking)
+        float enemyDistance = Vector3.Distance(transform.position, Player.position);
+        if (enemyDistance <= 30 && isChasing == false)
         {
-          movement =  Direction * Variables.moveSpeed * Time.deltaTime;
-          movement.z = 0;
+            isChasing = true;
         }
-        else
+        if (isChasing == true)
         {
-          Direction = Vector2.zero;
-          movement = Vector3.zero;
-        }
-        
-        GetComponent<ActorVariables>().Direction = Direction;
-        if(Direction.x != 0){
-          GetComponent<ActorVariables>().AttackDirection = Direction;
+            
+            if (enemyDistance >= MinDist && !GetComponent<ActorVariables>().isAttacking)
+            {
+                Direction = (Player.position - transform.position).normalized;
+                movement = Direction * Variables.moveSpeed * Time.deltaTime;
+                movement.z = 0;
+            }
+            else
+            {
+                Direction = Vector2.zero;
+                movement = Vector3.zero;
+            }
+
+            GetComponent<ActorVariables>().Direction = Direction;
+            if (Direction.x != 0)
+            {
+                GetComponent<ActorVariables>().AttackDirection = Direction;
+            }
         }
     }
     private void FixedUpdate() {
