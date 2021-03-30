@@ -6,14 +6,14 @@ using UnityEngine;
 public class Weapon
 {
     //Name of the weapon
-    [SerializeField]private string Name = "";
+    [SerializeField]private string name = "";
     //DamageType refers to the enum type to assign what type of damage the object will do.
-    [SerializeField]private int DamageAffect = 0;
+    [SerializeField]private int damageAffect = 0;
     
     //The duration in seconds that a damage affect will last
-    [SerializeField]private float EffectDuration = 0.0f;
+    [SerializeField]private float effectDuration = 0.0f;
     //If the type is bleed then this is the amount of damage that will accure every "tic"
-    [SerializeField]private float BleedAmount = 0.0f;
+    [SerializeField]private float bleedAmount = 0.0f;
     //The amount of damage this object will do
     [SerializeField]private float damage = 0.0f;
     //The duration of the attack
@@ -22,7 +22,7 @@ public class Weapon
     [SerializeField]private int attackRange = 0;
     public int getDamageType()
     {
-        return (int)DamageAffect;
+        return (int)damageAffect;
     }
     public float getDamageAmount()
     {
@@ -30,11 +30,11 @@ public class Weapon
     }
     public float getDuration()
     {
-        return EffectDuration;
+        return effectDuration;
     }
     public float getBleedAmount()
     {
-        return BleedAmount;
+        return bleedAmount;
     }
 
     public float getAttackDuration()
