@@ -1,18 +1,18 @@
 {
     "weapons": [{
-            "Name": "Fist",
-            "DamageAffect": 4,
-            "EffectDuration": 0.0,
-            "BleedAmount": 0.0,
+            "name": "Fist",
+            "damageAffect": 4,
+            "effectDuration": 0.0,
+            "bleedAmount": 0.0,
             "damage": 1.0,
             "attackDuration": 3.0,
             "attackRange": 5
         },
         {
-            "Name": "Whip",
-            "DamageAffect": 2,
-            "EffectDuration": 2.0,
-            "BleedAmount": 0.0,
+            "name": "Whip",
+            "damageAffect": 2,
+            "effectDuration": 2.0,
+            "bleedAmount": 0.0,
             "damage": 2.0,
             "attackDuration": 3.0,
             "attackRange": 9
