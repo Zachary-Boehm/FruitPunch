@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class LoadSceneOnAwake : MonoBehaviour
 {
     [SerializeField]private SceneName Scene;
-    private void Awake() 
+    private void Start() 
     {
         GameManager.GAMEMANAGER.loadScene(Scene, false);//Load scene specified by Scene variable
     }

@@ -30,6 +30,7 @@ public class PauseMenuController : MonoBehaviour
     //Go to main menu
     public void mainMenu()
     {
+        Time.timeScale = 1;//so coroutines will work
         GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
     }
 

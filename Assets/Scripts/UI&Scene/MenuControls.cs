@@ -38,15 +38,4 @@ public class MenuControls : MonoBehaviour
     {
         GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
     }
-
-
-    public void VolumeUp()
-    {
-        volumeLevel++;
-    }
-
-    public void volumeDown()
-    {
-        volumeLevel--;
-    }
 }

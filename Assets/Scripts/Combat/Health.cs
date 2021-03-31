@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     [Header("References")]
     [SerializeField]private ActorVariables Variables;
     [SerializeField]private Slider HealthBar = null;
-    private void Start() 
+    private void Awake() 
     {
         Variables = GetComponent<ActorVariables>(); //Variables that this object needs
         health = Variables.health;//Set the health to the default health in the variables script

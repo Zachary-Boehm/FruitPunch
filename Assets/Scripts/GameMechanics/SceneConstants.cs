@@ -22,9 +22,8 @@ public static class SceneConstants
 public enum SceneName{
   PersistantData = 0,
   MainMenu = 1,
-  LoadingScene = 2,
-  Level_1 = 3,
-  settings = 4
+  Level_1 = 2,
+  settings =3
 }
 
 

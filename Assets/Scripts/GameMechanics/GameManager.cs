@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private AudioManager soundManager;
     [SerializeField] private bool canMove = false;
+
     [Header("Menu's and Loading Screen")]
     [SerializeField] private GameObject loadingScreen;
     [SerializeField] private GameObject settingsMenu;
@@ -68,20 +70,25 @@ public class GameManager : MonoBehaviour
         if(scene == SceneName.MainMenu)
         {
             playMusic("Menu Music");
+            canMove = false;
         }
         if(scene == SceneName.Level_1)
         {
             playMusic("General Theme");
+            canMove = true;
         }
     }
 
     IEnumerator LoadingScreen()
     {
+        Debug.Log("Turning on loading screen");
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(5f);
+        Debug.Log("Turning off loading screen");
         loadingScreen.SetActive(false);
-        canMove = true;
     }
+
+
     //------------------------------
     //Json data methods
     //------------------------------
@@ -134,7 +141,17 @@ public class GameManager : MonoBehaviour
         soundManager.playMusic(musicName);
     }
 
+    public void updateFXVolume(Slider fxVolume)
+    {
+        soundManager.updateVolume(0, fxVolume.value);
+        soundFXVolume = fxVolume.value;
+    }
 
+    public void updateMusicVolume(Slider mVolume)
+    {
+        soundManager.updateVolume(1, mVolume.value);
+        musicVolume = mVolume.value;
+    }
     //------------------------------
     //Menu Logic
     //------------------------------

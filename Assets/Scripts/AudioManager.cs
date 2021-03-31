@@ -39,4 +39,9 @@ public class AudioManager : MonoBehaviour
         }
         Debug.Log("Invalid Audio Clip");
     }
+
+    public void updateVolume(int audioSource, float volume)
+    {
+        sources[audioSource].volume = volume;
+    }
 }
