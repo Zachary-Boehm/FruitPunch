@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
         {
             isChasing = true;
         }
-        if (isChasing == true)
+        if (isChasing == true && GameManager.GAMEMANAGER.getCanMove())
         {
             
             if (enemyDistance >= MinDist && !GetComponent<ActorVariables>().isAttacking)

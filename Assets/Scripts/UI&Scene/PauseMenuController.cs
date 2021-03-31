@@ -30,7 +30,7 @@ public class PauseMenuController : MonoBehaviour
     //Go to main menu
     public void mainMenu()
     {
-        SceneManager.LoadScene((int)SceneName.MainMenu);//Load The main menu
+        GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
     }
 
     //Go to settings menu
@@ -49,5 +49,10 @@ public class PauseMenuController : MonoBehaviour
     public void quit()
     {
         Application.Quit();
+    }
+
+    public void playButtonSound()
+    {
+        GameManager.GAMEMANAGER.playButtonHover("Button Hit");
     }
 }

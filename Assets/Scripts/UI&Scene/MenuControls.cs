@@ -13,15 +13,8 @@ public class MenuControls : MonoBehaviour
     int volumeLevel = 5;
 
     public void startGame(){
-      
-      StartCoroutine(LoadScene((int)SceneName.Level_1)); //Start coroutine to load in new scene
-    }
 
-    //Coroutine that will load in new scene
-    IEnumerator LoadScene(int scene)
-    {
-      yield return new WaitForSeconds(1f);
-      SceneManager.LoadScene(scene);
+        GameManager.GAMEMANAGER.loadScene(SceneName.Level_1); //Start coroutine to load in new scene
     }
 
     //Method will exit the game
@@ -43,7 +36,7 @@ public class MenuControls : MonoBehaviour
     //return to main menu
     public void goToMain()
     {
-        StartCoroutine(LoadScene((int)SceneName.MainMenu));
+        GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
     }
 
 

@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct MusicNames //struct that has reference to name of sound clips
+{
+    public static string MainMenu = "Menu Music";
+    public static string Level1 = "General THeme";
+}
+
 public static class SceneConstants
 {
     //Static animation variables
@@ -9,6 +15,8 @@ public static class SceneConstants
     static public string WalkAnim = "Walk";
     static public string PunchChargeAnim = "PunchCharge";
     static public string PunchReleaseAnim = "PunchRelease";
+
+    static public MusicNames musicNames;
 }
 
 public enum SceneName{
@@ -18,3 +26,5 @@ public enum SceneName{
   Level_1 = 3,
   settings = 4
 }
+
+

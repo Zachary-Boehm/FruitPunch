@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     //Set the Y of Velocity to the vertical input * speed
     Velocity.y = Input.GetAxisRaw("Vertical") * Variables.moveSpeed;
 
-    if(!Variables.isAttacking){
+    if(GameManager.GAMEMANAGER.getCanMove() && !Variables.isAttacking){
       //!Optimize Here
       direction = Velocity.normalized;
       Variables.Direction = direction;
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
   private void FixedUpdate() {
     //Apply motion
     //Set the velocity of the player's rigid body to the Velocity(input) * the change in time between frames
-    if(!Variables.isAttacking) {
+    if(!Variables.isAttacking && GameManager.GAMEMANAGER.getCanMove()) {
       PlayerRigidBody.velocity = Velocity * Time.deltaTime;
     }else{
       PlayerRigidBody.velocity = Vector2.zero;

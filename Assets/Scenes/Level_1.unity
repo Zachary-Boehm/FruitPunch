@@ -271,10 +271,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -593,6 +593,7 @@ GameObject:
   - component: {fileID: 231895491}
   - component: {fileID: 231895490}
   - component: {fileID: 231895493}
+  - component: {fileID: 231895494}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -744,6 +745,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &231895494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231895488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &251462973
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,10 +922,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -1156,10 +1186,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -1420,10 +1450,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -1699,21 +1729,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &694152072
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 694152071}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.19172, y: 8, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1871207207}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &694152073
+--- !u!212 &352161981
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1758,8 +1774,8 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 257.5351, y: 45.041924}
-  m_AdaptiveModeThreshold: 1
+  m_Size: {x: 255.08937, y: 45.041924}
+  m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
@@ -1772,7 +1788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352161980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.5, y: -4.1, z: 0}
+  m_LocalPosition: {x: 77.5001, y: -4.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1900735602}
@@ -1796,11 +1812,11 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 38.4, y: 45.041924}
-    newSize: {x: 257.5351, y: 45.041924}
-    adaptiveTilingThreshold: 1
+    newSize: {x: 255.08937, y: 45.041924}
+    adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 213.56766, y: 0.743536}
   m_EdgeRadius: 0
@@ -1822,11 +1838,11 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 38.4, y: 45.041924}
-    newSize: {x: 257.5351, y: 45.041924}
-    adaptiveTilingThreshold: 1
+    newSize: {x: 255.08937, y: 45.041924}
+    adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 214.85574, y: 1.856842}
   m_EdgeRadius: 0
@@ -2000,6 +2016,7 @@ GameObject:
   - component: {fileID: 482983669}
   - component: {fileID: 482983668}
   - component: {fileID: 482983671}
+  - component: {fileID: 482983672}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -2151,6 +2168,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &482983672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482983666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &545205024
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2393,8 @@ GameObject:
   - component: {fileID: 730768651}
   - component: {fileID: 730768650}
   - component: {fileID: 730768653}
+  - component: {fileID: 730768654}
+  - component: {fileID: 730768655}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -2392,213 +2440,6 @@ MonoBehaviour:
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
   isAttacking: 0
---- !u!114 &816491716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816491707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eeb4c356d7cb4647915aadc0398a4e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 1491864056}
-  Direction: {x: 0, y: 0}
---- !u!4 &816491717
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816491707}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.79, y: -5.31, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &816491718
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816491707}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.03591633, y: 0.502851}
-  m_Size: {x: 4.267927, y: 13.822108}
-  m_Direction: 0
---- !u!1 &876095624
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 876095627}
-  - component: {fileID: 876095626}
-  - component: {fileID: 876095625}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &876095625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876095624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &876095626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876095624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &876095627
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876095624}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.516981, y: -2.6963992, z: 1.1743999}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1499785508}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &960921717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 960921718}
-  - component: {fileID: 960921719}
-  - component: {fileID: 960921720}
-  m_Layer: 5
-  m_Name: Health Bar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &960921718
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960921717}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 480930926}
-  - {fileID: 99137065}
-  - {fileID: 1186806369}
-  - {fileID: 1789108841}
-  m_Father: {fileID: 545205028}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 131.2998, y: 6.699951}
-  m_SizeDelta: {x: 381.0574, y: 99.9259}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &960921719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960921717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 0
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 730768651}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1341363650}
-        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-        m_MethodName: settingsMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &730768651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +2497,91 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &730768654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730768648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &730768655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730768648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 3
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 730768651}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1341363650}
+        m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+        m_MethodName: settingsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &750649978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,10 +2994,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -3348,10 +3274,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -3612,10 +3538,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -4063,10 +3989,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -4438,10 +4364,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -4567,6 +4493,7 @@ GameObject:
   - component: {fileID: 1228240583}
   - component: {fileID: 1228240582}
   - component: {fileID: 1228240585}
+  - component: {fileID: 1228240586}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -4718,6 +4645,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1228240586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228240580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1248065511
 GameObject:
   m_ObjectHideFlags: 0
@@ -4866,10 +4822,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -5135,10 +5091,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -5519,10 +5475,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -5648,6 +5604,7 @@ GameObject:
   - component: {fileID: 1459787503}
   - component: {fileID: 1459787502}
   - component: {fileID: 1459787505}
+  - component: {fileID: 1459787506}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -5787,6 +5744,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1459787506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459787500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playButtonSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1491864056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8323302229840780603, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
@@ -5973,10 +5959,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -6237,10 +6223,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -6501,10 +6487,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -6840,10 +6826,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0
@@ -7324,10 +7310,10 @@ MonoBehaviour:
     m_Bits: 64
   weaponType: 0
   Weapon:
-    Name: 
-    DamageAffect: 0
-    EffectDuration: 0
-    BleedAmount: 0
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
     damage: 0
     attackDuration: 0
     attackRange: 0

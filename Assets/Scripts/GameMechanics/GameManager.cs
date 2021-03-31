@@ -1,34 +1,92 @@
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private AudioManager soundManager;
+    [SerializeField] private bool canMove = false;
     [Header("Menu's and Loading Screen")]
-    [SerializeField]private GameObject LoadingScreen;
-    [SerializeField] private GameObject SettingsMenu;
+    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private GameObject settingsMenu;
+
+    [Header("Menu Variables")]
+    [Range(0.00f, 1.00f)]//Adds a slider into the inspector for soundFX volume
+    [SerializeField] private float soundFXVolume; //percent of FX volume
+    [Range(0.00f, 1.00f)]//Adds a slider into the inspector for Music volume
+    [SerializeField] private float musicVolume; //percent of Music volume
 
     [Header("Weapons Json Data")]
     public TextAsset textJSON;
-    [SerializeField]private WeaponList WeaponsList = new WeaponList();
+    [SerializeField] private WeaponList WeaponsList = new WeaponList();
     public static GameManager GAMEMANAGER;
 
-    private void Awake() 
+    //------------------------------
+    //Initialization
+    //------------------------------
+
+    private void Awake()
     {
         //create a singleton of this game manager
-        if(GAMEMANAGER != null && GAMEMANAGER != this)
+        if (GAMEMANAGER != null && GAMEMANAGER != this)
         {
             Destroy(this.gameObject);
-        }else
+        } else
         {
             GAMEMANAGER = this;
         }
     }
-    private void Start() 
+    private void Start()
     {
-        ReadWeapons();
+        ReadWeapons(); //Reads in the weapons
     }
+
+
+    //------------------------------
+    //Global Variable Getters
+    //------------------------------
+    public bool getCanMove()//return whether entities are allowed to move
+    {
+        return canMove;
+    }
+
+    //------------------------------
+    //Scene Loading
+    //------------------------------
+
+
+    public void loadScene(SceneName scene, bool withLoadingScreen = true)
+    {
+        Debug.Log("Loading next scene");
+        if(withLoadingScreen)
+        {
+            StartCoroutine(LoadingScreen());
+        }
+        SceneManager.LoadScene((int)scene);
+        if(scene == SceneName.MainMenu)
+        {
+            playMusic("Menu Music");
+        }
+        if(scene == SceneName.Level_1)
+        {
+            playMusic("General Theme");
+        }
+    }
+
+    IEnumerator LoadingScreen()
+    {
+        loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(5f);
+        loadingScreen.SetActive(false);
+        canMove = true;
+    }
+    //------------------------------
+    //Json data methods
+    //------------------------------
+
+
     //Reads in the list of weaons from json
     public void ReadWeapons()
     {
@@ -47,14 +105,51 @@ public class GameManager : MonoBehaviour
         return WeaponsList;
     }
 
+
+    //------------------------------
+    //Sound Methods
+    //------------------------------
+
+
+    //gets FX volume
+    public float getFXVolume()
+    {
+        return soundFXVolume;
+    }
+
+    //gets music volume
+    public float getMusicVolume()
+    {
+        return musicVolume;
+    }
+
+    //Plays the button hover sound
+    public void playButtonHover(string fxName)
+    {
+        soundManager.playFx(fxName);
+    }
+
+    public void playMusic(string musicName)
+    {
+        soundManager.playMusic(musicName);
+    }
+
+
+    //------------------------------
+    //Menu Logic
+    //------------------------------
+
+
     //Opens the settings menu
     public void openSettings()
     {
-        SettingsMenu.SetActive(true);
+        settingsMenu.SetActive(true);
     }
     //Close the settings menu
     public void closeSettings()
     {
-        SettingsMenu.SetActive(false);
+        settingsMenu.SetActive(false);
     }
+
+    
 }
