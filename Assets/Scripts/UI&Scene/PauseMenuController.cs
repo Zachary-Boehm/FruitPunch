@@ -54,6 +54,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void playButtonSound()
     {
-        GameManager.GAMEMANAGER.playButtonHover("Button Hit");
+        GameManager.GAMEMANAGER.playFX("Button Hit");
     }
 }

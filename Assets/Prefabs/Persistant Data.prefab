@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 562296243501768954}
   - component: {fileID: 6312145682339451690}
   - component: {fileID: 1750655720571021050}
+  - component: {fileID: 478036993308078275}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -166,12 +167,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f7fdb1ee5d4b045b017f2e181642d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundManager: {fileID: 0}
   canMove: 0
+  soundManager: {fileID: 478036993308078275}
+  VolumeSliders:
+  - {fileID: 6390230315719191272}
+  - {fileID: 1931440341082330281}
   loadingScreen: {fileID: 6618107571187571508}
   settingsMenu: {fileID: 5981276346208686331}
-  soundFXVolume: 0
-  musicVolume: 0
+  soundFXVolume: 0.43
+  musicVolume: 0.411
   textJSON: {fileID: 4900000, guid: 0aadc1d5ac73d6c49bea2e4df4f3aa45, type: 3}
   WeaponsList:
     weapons: []
@@ -367,6 +371,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &478036993308078275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562296243501768948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba6fb5264e78ed409518ee8b82d19a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sources:
+  - {fileID: 6312145682339451690}
+  - {fileID: 1750655720571021050}
+  fx:
+  - {fileID: 8300000, guid: 004f29b6fb2675543b52dd31437527f9, type: 3}
+  music:
+  - {fileID: 8300000, guid: 35688ff55454db64ebebfcab4e2356c0, type: 3}
+  - {fileID: 8300000, guid: a571071729c212e4db10f6f78fe4fd63, type: 3}
 --- !u!1 &1000585184379781713
 GameObject:
   m_ObjectHideFlags: 0

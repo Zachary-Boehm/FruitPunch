@@ -7,8 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private AudioManager soundManager;
+    
     [SerializeField] private bool canMove = false;
+    [Header("Audio Variables")]
+    [SerializeField] private AudioManager soundManager;
+    [SerializeField] private Slider[] VolumeSliders;
 
     [Header("Menu's and Loading Screen")]
     [SerializeField] private GameObject loadingScreen;
@@ -131,7 +134,7 @@ public class GameManager : MonoBehaviour
     }
 
     //Plays the button hover sound
-    public void playButtonHover(string fxName)
+    public void playFX(string fxName)
     {
         soundManager.playFx(fxName);
     }
@@ -141,16 +144,28 @@ public class GameManager : MonoBehaviour
         soundManager.playMusic(musicName);
     }
 
-    public void updateFXVolume(Slider fxVolume)
+    public void updateFXVolume()
     {
-        soundManager.updateVolume(0, fxVolume.value);
-        soundFXVolume = fxVolume.value;
+        foreach(Slider s in VolumeSliders)
+        {
+            if(s.name == "FX Slider")
+            {
+                soundManager.updateVolume(0, s.value);
+                soundFXVolume = s.value;
+            }
+        }
     }
 
-    public void updateMusicVolume(Slider mVolume)
+    public void updateMusicVolume()
     {
-        soundManager.updateVolume(1, mVolume.value);
-        musicVolume = mVolume.value;
+        foreach(Slider s in VolumeSliders)
+        {
+            if(s.name == "Music Slider")
+            {
+                soundManager.updateVolume(1, s.value);
+                soundFXVolume = s.value;
+            }
+        }
     }
     //------------------------------
     //Menu Logic
@@ -169,4 +184,10 @@ public class GameManager : MonoBehaviour
     }
 
     
+}
+
+[System.Serializable]
+public class SaveData
+{
+
 }
