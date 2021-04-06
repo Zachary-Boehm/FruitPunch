@@ -5,8 +5,8 @@
             "effectDuration": 0.0,
             "bleedAmount": 0.0,
             "damage": 1.0,
-            "attackDuration": 3.0,
-            "attackRange": 4
+            "attackDuration": 0.5,
+            "attackRange": 6.3
         },
         {
             "name": "Whip",
