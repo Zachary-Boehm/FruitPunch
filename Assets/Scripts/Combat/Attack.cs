@@ -10,16 +10,17 @@ public class Attack : MonoBehaviour
 {
     private bool canAttack = false; //Determines if the object can attack
     private ActorVariables Variables;//Global variables for this object
-    [SerializeField] private LayerMask TargetLayer;//The layer that will interact with the physics ray cast
+    [SerializeField] private LayerMask targetLayer;//The layer that will interact with the physics ray cast
 
     [Header("Weapon Details")]
     [SerializeField] private WeaponType weaponType; //The weapon type that is to be used for this object
-    [SerializeField] private Weapon Weapon;//The gameobject weapon of this object. It will hold the damage Script
+    [SerializeField] private Weapon weapon;//The gameobject weapon of this object. It will hold the damage Script
+    [SerializeField] private float cooldown;
     private float Multiplier = 1;//Damage multiplier
     private void Start()
     {
         //Grab the weapon information from the Game Manager
-        Weapon = GameManager.GAMEMANAGER.getWeapons().weapons[(int)weaponType];
+        weapon = GameManager.GAMEMANAGER.getWeapons().weapons[(int)weaponType];
         Rigidbody2D rb = GetComponent<Rigidbody2D>();//Reference to the objects rigid body
         Variables = GetComponent<ActorVariables>(); //Reference to the objects global variables
         rb.freezeRotation = true; //freeze the rotation of rigid body
@@ -32,7 +33,7 @@ public class Attack : MonoBehaviour
     public void AttackTarget(float multiplier = 1)
     {
         Multiplier = multiplier; //Set the multiplier to what is passed or to the default of 1
-        StartCoroutine(AttackTimer(Weapon.getAttackDuration())); //Begin the attack timer
+        StartCoroutine(AttackTimer()); //Begin the attack timer
         canAttack = true; //Allow the attack to begin
     }
     private void Update()
@@ -41,7 +42,7 @@ public class Attack : MonoBehaviour
         {
             //!Get the direction of the player's movement, then apply that to the direction of attack
             //Do a ray cast and store the collisions in the hit variable
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), Weapon.getAttackRange(), TargetLayer);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), weapon.getAttackRange(), targetLayer);
             //if hit is not null
             if (hit)
             {
@@ -54,10 +55,10 @@ public class Attack : MonoBehaviour
     //This method will apply the damage from the damage script to the target object
     public void DealDamage(GameObject target)
     {
-        if (target.GetComponent<Health>() && Weapon != null)
+        if (target.GetComponent<Health>() && weapon != null)
         {
             //Call the Damage method on the Health script attached to target and pass values from damage script on this object
-            target.GetComponent<Health>().Damage(Weapon, Weapon.getDamageAmount() * Multiplier);
+            target.GetComponent<Health>().Damage(weapon, weapon.getDamageAmount() * Multiplier);
         }
         else
         {
@@ -68,9 +69,9 @@ public class Attack : MonoBehaviour
 
     //This coroutine is a timer for the attacks
     //If the timer is done before the attack hits something the attack will finish
-    IEnumerator AttackTimer(float duration)
+    IEnumerator AttackTimer()
     {
-        yield return new WaitForSeconds(duration); //wait for duration of attack
+        yield return new WaitForSeconds(cooldown); //wait for duration of attack
         canAttack = false; //Make it so attacks are not active
     }
 }
