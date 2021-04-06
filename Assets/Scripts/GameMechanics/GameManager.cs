@@ -7,8 +7,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private AudioManager soundManager;
+    
     [SerializeField] private bool canMove = false;
+    [Header("Audio Variables")]
+    [SerializeField] private AudioManager soundManager;
+    [SerializeField] private Slider[] VolumeSliders;
 
     [Header("Menu's and Loading Screen")]
     [SerializeField] private GameObject loadingScreen;
@@ -20,10 +23,12 @@ public class GameManager : MonoBehaviour
     [Range(0.00f, 1.00f)]//Adds a slider into the inspector for Music volume
     [SerializeField] private float musicVolume; //percent of Music volume
 
-    [Header("Weapons Json Data")]
-    public TextAsset textJSON;
+    [Header("Json Data")]
+    public TextAsset weaponDataFile;
+    public TextAsset gameDataFile;
     [SerializeField] private WeaponList WeaponsList = new WeaponList();
     public static GameManager GAMEMANAGER;
+    private SaveData gameData = new SaveData();
 
     //------------------------------
     //Initialization
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ReadWeapons(); //Reads in the weapons
+        LoadGame();
     }
 
 
@@ -97,13 +103,13 @@ public class GameManager : MonoBehaviour
     //Reads in the list of weaons from json
     public void ReadWeapons()
     {
-        WeaponsList = JsonUtility.FromJson<WeaponList>(textJSON.text);
+        WeaponsList = JsonUtility.FromJson<WeaponList>(weaponDataFile.text);
     }
     //writes the list of weapons to the json file
     public void WriteWeapons()
     {
         string jsonData = JsonUtility.ToJson(WeaponsList);
-        File.WriteAllText(Application.dataPath + "/Scripts/Weapons/WeaponData.json", jsonData);
+        File.WriteAllText(Application.dataPath + "/Scripts/GameMechanics/" + weaponDataFile.name + ".json", jsonData);
     }
 
     //returns the list of weapons that can be used
@@ -112,7 +118,22 @@ public class GameManager : MonoBehaviour
         return WeaponsList;
     }
 
+    public void SaveGame()
+    {
+        gameData.fxVolume = soundFXVolume;
+        gameData.musicVolume = musicVolume;
+        gameData.WriteGameData(gameDataFile);
+        Debug.Log("GameSaved");
+    }
 
+    public void LoadGame()
+    {
+        gameData.ReadGameData(gameDataFile);
+        Debug.Log(gameData.fxVolume + " | " + gameData.musicVolume);
+        soundFXVolume = gameData.fxVolume;
+        musicVolume = gameData.musicVolume;
+        updateVolumes();
+    }
     //------------------------------
     //Sound Methods
     //------------------------------
@@ -131,7 +152,7 @@ public class GameManager : MonoBehaviour
     }
 
     //Plays the button hover sound
-    public void playButtonHover(string fxName)
+    public void playFX(string fxName)
     {
         soundManager.playFx(fxName);
     }
@@ -141,16 +162,43 @@ public class GameManager : MonoBehaviour
         soundManager.playMusic(musicName);
     }
 
-    public void updateFXVolume(Slider fxVolume)
+    public void updateFXVolume()
     {
-        soundManager.updateVolume(0, fxVolume.value);
-        soundFXVolume = fxVolume.value;
+        foreach(Slider s in VolumeSliders)
+        {
+            if(s.name == "FX Slider")
+            {
+                soundManager.updateVolume(0, s.value);
+                soundFXVolume = s.value;
+            }
+        }
     }
 
-    public void updateMusicVolume(Slider mVolume)
+    public void updateMusicVolume()
     {
-        soundManager.updateVolume(1, mVolume.value);
-        musicVolume = mVolume.value;
+        foreach(Slider s in VolumeSliders)
+        {
+            if(s.name == "Music Slider")
+            {
+                soundManager.updateVolume(1, s.value);
+                musicVolume = s.value;
+            }
+        }
+    }
+
+    public void updateVolumes()
+    {
+        foreach(Slider s in VolumeSliders)
+        {
+            if(s.name == "Music Slider")
+            {
+                s.value = musicVolume;
+            }
+            else if(s.name == "FX Slider")
+            {
+                s.value = soundFXVolume;
+            }
+        }
     }
     //------------------------------
     //Menu Logic
@@ -169,4 +217,26 @@ public class GameManager : MonoBehaviour
     }
 
     
+}
+
+[System.Serializable]
+public class SaveData
+{
+    public float fxVolume;
+    public float musicVolume;
+
+    //Reads in the data from json
+    public void ReadGameData(TextAsset file)
+    {
+        SaveData temp = JsonUtility.FromJson<SaveData>(file.text);
+        fxVolume = temp.fxVolume;
+        musicVolume = temp.musicVolume;
+    }
+    //writes the data to the json file
+    public void WriteGameData(TextAsset file)
+    {
+        string jsonData = JsonUtility.ToJson(this);
+        Debug.Log("Saving this data to save file: " + jsonData);
+        File.WriteAllText(Application.dataPath + "/Scripts/GameMechanics/" + file.name + ".json", jsonData);
+    }
 }

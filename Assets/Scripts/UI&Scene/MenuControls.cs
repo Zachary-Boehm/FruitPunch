@@ -19,8 +19,9 @@ public class MenuControls : MonoBehaviour
 
     //Method will exit the game
     public void exitGame()
-    {   
-      Application.Quit();
+    {
+        GameManager.GAMEMANAGER.SaveGame();
+        Application.Quit();
     }
 
     //Will open the settings menu
@@ -37,5 +38,10 @@ public class MenuControls : MonoBehaviour
     public void goToMain()
     {
         GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
+    }
+
+    public void playButtonHover()
+    {
+        GameManager.GAMEMANAGER.playFX("Button Hit");
     }
 }
