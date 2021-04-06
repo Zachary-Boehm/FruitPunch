@@ -9,7 +9,7 @@ public class TomatoHealthBar : MonoBehaviour
     [SerializeField]private Image TomatoState;
     [SerializeField]private Sprite[] TomatoStates;
     private float good,damaged;
-    private void Start() {
+    private void Awake() {
       Health = GetComponent<Slider>();
       good = .5f * Health.maxValue;
       damaged = .15f * Health.maxValue;

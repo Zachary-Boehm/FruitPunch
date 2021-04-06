@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: 9051239656785472935
     second: Cabinet_1
+  - first:
+      213: 3052843847373266838
+    second: Cabinet_2
+  - first:
+      213: -6884536966803795764
+    second: Cabinet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +111,7 @@ TextureImporter:
         width: 2459
         height: 2814
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +132,7 @@ TextureImporter:
         width: 2527
         height: 1944
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,6 +140,48 @@ TextureImporter:
       bones: []
       spriteID: 7ad60a723867c9d70800000000000000
       internalID: 9051239656785472935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cabinet_2
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 3331
+        width: 2587
+        height: 1758
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f9b65fd41ed5a20800000000000000
+      internalID: 3052843847373266838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cabinet_3
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 5
+        width: 2526
+        height: 2056
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc05d92ca163570a0800000000000000
+      internalID: -6884536966803795764
       vertices: []
       indices: 
       edges: []

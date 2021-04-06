@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] fx;
     [Header("Music Audio Sources")]
     [SerializeField] private AudioClip[] music;
+    [Header("Audio Mixer")]
+    [SerializeField] private AudioMixer Mixer;
 
     public void playFx(string fxName)
     {
@@ -31,9 +34,11 @@ public class AudioManager : MonoBehaviour
         {
             if (clip.name == musicName)
             {
+                //Fade out current music
                 sources[1].clip = clip;
                 sources[1].volume = GameManager.GAMEMANAGER.getMusicVolume();
                 sources[1].Play();
+                //Fade in new music
                 return;
             }
         }
@@ -44,4 +49,6 @@ public class AudioManager : MonoBehaviour
     {
         sources[audioSource].volume = volume;
     }
+
+    
 }
