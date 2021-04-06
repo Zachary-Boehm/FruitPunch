@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     //int MaxDist = 10;
     int MinDist = 10;
     private ActorVariables Variables;
+    [SerializeField] private EnemyAttack Attack;
     bool isChasing = false;
     bool isAttacking = false;
 
@@ -38,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 Direction = Vector2.zero;
                 movement = Vector3.zero;
+                Attack.AttackTarget();
             }
 
             GetComponent<ActorVariables>().Direction = Direction;
