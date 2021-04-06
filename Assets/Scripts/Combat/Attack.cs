@@ -15,7 +15,6 @@ public class Attack : MonoBehaviour
     [Header("Weapon Details")]
     [SerializeField] private WeaponType weaponType; //The weapon type that is to be used for this object
     [SerializeField] private Weapon weapon;//The gameobject weapon of this object. It will hold the damage Script
-    [SerializeField] private float cooldown;
     private float Multiplier = 1;//Damage multiplier
     private void Start()
     {
@@ -71,7 +70,7 @@ public class Attack : MonoBehaviour
     //If the timer is done before the attack hits something the attack will finish
     IEnumerator AttackTimer()
     {
-        yield return new WaitForSeconds(cooldown); //wait for duration of attack
+        yield return new WaitForSeconds(weapon.getDuration()); //wait for duration of attack
         canAttack = false; //Make it so attacks are not active
     }
 }

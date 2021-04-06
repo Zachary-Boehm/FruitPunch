@@ -7,18 +7,15 @@ public class EnemyMovement : MonoBehaviour
     public Transform Player;
     //int MaxDist = 10;
     int MinDist = 10;
-    private ActorVariables Variables;
-    [SerializeField] private EnemyAttack Attack;
+    [SerializeField]private ActorVariables Variables;
+    [SerializeField] private Attack Attack;
     bool isChasing = false;
     bool isAttacking = false;
-
+    bool canAttack = false;
     Vector3 movement = Vector3.zero;
     [SerializeField] private Vector2 Direction;
-    void Start()
-    {
-      Variables = GetComponent<ActorVariables>();
-    }
-
+    
+    [SerializeField] private float cooldown;
     void Update()
     {
         float enemyDistance = Vector3.Distance(transform.position, Player.position);
@@ -39,7 +36,13 @@ public class EnemyMovement : MonoBehaviour
             {
                 Direction = Vector2.zero;
                 movement = Vector3.zero;
-                Attack.AttackTarget();
+                if(canAttack == false)
+                {
+                    Debug.Log("attack player");
+                    Attack.AttackTarget();
+                    StartCoroutine(attackCooldown());
+                    canAttack = true;
+                }
             }
 
             GetComponent<ActorVariables>().Direction = Direction;
@@ -51,5 +54,12 @@ public class EnemyMovement : MonoBehaviour
     }
     private void FixedUpdate() {
       transform.position += movement;
+    }
+
+    IEnumerator attackCooldown()
+    {
+        yield return new WaitForSeconds(cooldown);
+        canAttack = false;
+        Debug.Log("Finished Attacking player");
     }
 }
