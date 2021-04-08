@@ -8,11 +8,11 @@ public struct MusicNames //struct that has reference to name of sound clips
     public static string Level1 = "General THeme";
 }
 
+
 public struct FXNames //struct that has reference to name of sound clips
 {
     public static string ButtonHover = "Button Hit";
 }
-
 public static class SceneConstants
 {
     //Static animation variables

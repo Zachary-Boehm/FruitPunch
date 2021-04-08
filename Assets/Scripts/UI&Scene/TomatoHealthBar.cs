@@ -18,16 +18,19 @@ public class TomatoHealthBar : MonoBehaviour
     }
     public void updateHealthImage()
     {
-        if(Health.value > good){ //50% of health left
-            TomatoState.sprite = TomatoStates[0];
-        }
-        else if(Health.value <= good && Health.value > damaged)
+        if(Health != null)
         {
-            TomatoState.sprite = TomatoStates[2];
-        }
-        else if(Health.value <= damaged)
-        {
-            TomatoState.sprite = TomatoStates[1];
+            if(Health.value > good){ //50% of health left
+                TomatoState.sprite = TomatoStates[0];
+            }
+            else if(Health.value <= good && Health.value > damaged)
+            {
+                TomatoState.sprite = TomatoStates[2];
+            }
+            else if(Health.value <= damaged)
+            {
+                TomatoState.sprite = TomatoStates[1];
+            }
         }
     }
 }
