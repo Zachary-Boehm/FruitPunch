@@ -59,5 +59,5 @@ public class WeaponList
 public enum WeaponType
 {
     Fist = 0, //The fist weapon
-    Whip = 1 //The whip weapon
+    GrapeFist = 1 //The whip weapon
 }

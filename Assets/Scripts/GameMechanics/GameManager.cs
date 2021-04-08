@@ -87,10 +87,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadingScreen()
     {
-        Debug.Log("Turning on loading screen");
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(5f);
-        Debug.Log("Turning off loading screen");
         loadingScreen.SetActive(false);
     }
 

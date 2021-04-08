@@ -626,7 +626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -233.3, y: 24.1}
+  m_AnchoredPosition: {x: 227.6, y: 27.7}
   m_SizeDelta: {x: 91, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &242394210
@@ -1795,7 +1795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -438, y: 6.699951}
+  m_AnchoredPosition: {x: -508.00003, y: 6.699951}
   m_SizeDelta: {x: 381.05737, y: 99.9259}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &684046280
@@ -1862,22 +1862,10 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 68
+  m_Value: 63
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 684046280}
-        m_TargetAssemblyTypeName: TomatoHealthBar, Assembly-CSharp
-        m_MethodName: updateHealthImage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &694152071
 GameObject:
   m_ObjectHideFlags: 0
@@ -3867,15 +3855,15 @@ RectTransform:
   m_GameObject: {fileID: 1303695013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 684046279}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0006104, y: -0.000019073486}
-  m_SizeDelta: {x: 371.06, y: 49.963}
+  m_AnchoredPosition: {x: 0.0009765625, y: -0.000019073486}
+  m_SizeDelta: {x: 381.06, y: 49.963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1303695015
 MonoBehaviour:
@@ -4673,7 +4661,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 64
-  weaponType: 0
+  weaponType: 1
   weapon:
     name: 
     damageAffect: 0
@@ -4744,6 +4732,7 @@ MonoBehaviour:
   health: 1
   Variables: {fileID: 0}
   HealthBar: {fileID: 0}
+  animator: {fileID: 1820441227}
 --- !u!114 &1790491150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4757,9 +4746,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSpeed: 50
-  defaultHealth: 1
+  defaultHealth: 6
   moveSpeed: 50
-  health: 1
+  health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
   isAttacking: 0
@@ -4779,7 +4768,7 @@ MonoBehaviour:
   Variables: {fileID: 1790491150}
   Attack: {fileID: 1790491146}
   Direction: {x: 0, y: 0}
-  cooldown: 1
+  cooldown: 2.5
 --- !u!4 &1790491152
 Transform:
   m_ObjectHideFlags: 0
@@ -4806,6 +4795,7 @@ GameObject:
   - component: {fileID: 1820441226}
   - component: {fileID: 1820441228}
   - component: {fileID: 1820441227}
+  - component: {fileID: 1820441229}
   m_Layer: 7
   m_Name: Splatter
   m_TagString: Untagged
@@ -4821,8 +4811,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820441225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.37, y: 7.2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 4.8, y: 7.2, z: 0}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1790491152}
   m_RootOrder: 0
@@ -4891,12 +4881,24 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 15.000001, y: 10.000001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1820441229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820441225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c7c7ab8abc39024b9d48d11e44b422a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1844522656
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,7 +5303,7 @@ RectTransform:
   m_GameObject: {fileID: 2039333880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: -1}
   m_Children: []
   m_Father: {fileID: 898851997}
   m_RootOrder: 0
@@ -5336,7 +5338,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.68
+  m_FillAmount: 0.63
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -5390,7 +5392,11 @@ PrefabInstance:
       objectReference: {fileID: 960921719}
     - target: {fileID: 8323302229840780599, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: health
-      value: 10
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323302229840780599, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
+      propertyPath: defaultHealth
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780600, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: cooldown
