@@ -4,18 +4,18 @@
             "damageAffect": 4,
             "effectDuration": 0.0,
             "bleedAmount": 0.0,
-            "damage": 1.0,
+            "damage": 2.0,
             "attackDuration": 0.5,
-            "attackRange": 6.3
+            "attackRange": 7
         },
         {
-            "name": "Whip",
-            "damageAffect": 2,
-            "effectDuration": 2.0,
+            "name": "GrapeFist",
+            "damageAffect": 4,
+            "effectDuration": 0.0,
             "bleedAmount": 0.0,
             "damage": 2.0,
-            "attackDuration": 3.0,
-            "attackRange": 9
+            "attackDuration": 0.5,
+            "attackRange": 5
         }
     ]
 }

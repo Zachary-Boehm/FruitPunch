@@ -13,8 +13,6 @@ public class TomatoHealthBar : MonoBehaviour
       Health = GetComponent<Slider>();
       good = .5f * Health.maxValue;
       damaged = .15f * Health.maxValue;
-      Debug.Log(good);
-      Debug.Log(damaged);
     }
     public void updateHealthImage()
     {

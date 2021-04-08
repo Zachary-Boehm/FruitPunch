@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [Header("References")]
     [SerializeField]private ActorVariables Variables;
     [SerializeField]private Slider HealthBar = null;
+    [SerializeField] private Animator animator;
     private void Awake() 
     {
         Variables = GetComponent<ActorVariables>(); //Variables that this object needs
@@ -43,7 +44,7 @@ public class Health : MonoBehaviour
         {
             //Set health to 0
             health = 0;
-            
+            Variables.health = 0;
             if(HealthBar){ //Make sure that it has a health bar
             HealthBar.value = health;
             }
@@ -53,7 +54,9 @@ public class Health : MonoBehaviour
         { //Else if the health is above 0
             //Set the current health to the new health
             health = newHealth;
-            HealthBar.value = health;
+            Variables.health = newHealth;
+            if(HealthBar){HealthBar.value = health;}
+            
         }
         
         //Checks for valid input of Damage Type
@@ -64,6 +67,9 @@ public class Health : MonoBehaviour
             DamageEffect(_weapon);//call the logic for the effect since the type is vaild
             }
         }
+        //Plays it's splatter animation
+        if (animator) {animator.SetBool("isHit", true); }
+        
     }
 
     /*
