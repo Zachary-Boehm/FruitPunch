@@ -41,6 +41,7 @@ public class EnemyMovement : MonoBehaviour
                     Debug.Log("attack player");
                     Attack.AttackTarget();
                     StartCoroutine(attackCooldown());
+                    GetComponent<AnimationController>().ChangeAnim(SceneConstants.Punch);
                     canAttack = true;
                 }
             }
