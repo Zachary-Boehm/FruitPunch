@@ -60,6 +60,10 @@ public class GameManager : MonoBehaviour
         return canMove;
     }
 
+    public void setCanMove(bool notFrozen)
+    {
+        canMove = notFrozen;
+    }
     //------------------------------
     //Scene Loading
     //------------------------------
@@ -81,7 +85,6 @@ public class GameManager : MonoBehaviour
         if(scene == SceneName.Level_1)
         {
             playMusic("General Theme");
-            canMove = true;
         }
     }
 
