@@ -74,7 +74,7 @@ public class BossMovement : MonoBehaviour
     int countEnemies()
     {
         //I know that the GameObject.Find(...) should be proper, I'm just trying to make a good for each loop
-        foreach (Gameobject Enemy in GameObject.FindGameObjectsWithTag("Enemy").Length)
+        foreach (GameObject Enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
             enemyTotal++;
         }
