@@ -2442,6 +2442,8 @@ GameObject:
   - component: {fileID: 577050792}
   - component: {fileID: 577050791}
   - component: {fileID: 577050790}
+  - component: {fileID: 577050794}
+  - component: {fileID: 577050793}
   m_Layer: 0
   m_Name: Watermelon Idle Spritesheet_0
   m_TagString: Untagged
@@ -2533,6 +2535,47 @@ Transform:
   m_Father: {fileID: 1548324075}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577050793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577050789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e41e671399e80f34891f7ca882e40a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 577050792}
+  Variables: {fileID: 0}
+  Attack: {fileID: 1790491146}
+  Direction: {x: 0, y: 0}
+  cooldown: 0
+--- !u!114 &577050794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577050789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5b007175db77874a9b5af122e05a73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  weaponType: 0
+  Weapon:
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
+    damage: 0
+    attackDuration: 0
+    attackRange: 0
 --- !u!1 &601836749
 GameObject:
   m_ObjectHideFlags: 0
