@@ -3577,7 +3577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  hitColor: {r: 0.9811321, g: 0.35635456, b: 0.35635456, a: 0}
+  hitColor: {r: 0.9811321, g: 0.35635456, b: 0.35635456, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   Variables: {fileID: 0}
   HealthBar: {fileID: 684046281}
@@ -7468,7 +7468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19081523, g: 0.6037736, b: 0.21774733, a: 1}
+  m_Color: {r: 1, g: 0.18431373, b: 0.18431373, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11028,7 +11028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.860965, g: 1, b: 0.8537736, a: 1}
+  m_Color: {r: 0.8627451, g: 1, b: 0.85490197, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11494,7 +11494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780597, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: chargeMultiplier
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780598, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: animator
