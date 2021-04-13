@@ -2670,7 +2670,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 577050792}
   m_Father: {fileID: 1498407147}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3400,7 +3401,7 @@ GameObject:
   - component: {fileID: 577050798}
   - component: {fileID: 577050794}
   m_Layer: 0
-  m_Name: Watermelon Idle Spritesheet_0
+  m_Name: Watermelon Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3484,10 +3485,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577050789}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 192.8, y: 1.7198429, z: 153.42795}
+  m_LocalPosition: {x: 14.355621, y: 2.3180652, z: 241.7341}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1548324075}
+  m_Father: {fileID: 425524221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &577050793
@@ -3547,7 +3548,7 @@ MonoBehaviour:
   hitColor: {r: 0, g: 0, b: 0, a: 0}
   normalColor: {r: 0, g: 0, b: 0, a: 0}
   Variables: {fileID: 0}
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 684046281}
   animator: {fileID: 0}
 --- !u!114 &577050796
 MonoBehaviour:
@@ -8572,7 +8573,7 @@ Transform:
   - {fileID: 687940657}
   - {fileID: 425524221}
   m_Father: {fileID: 1548324075}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1499785507
 GameObject:
@@ -8635,7 +8636,6 @@ Transform:
   m_LocalPosition: {x: 18.716766, y: -4.319843, z: -153.42795}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 577050792}
   - {fileID: 1498407147}
   m_Father: {fileID: 0}
   m_RootOrder: 3
