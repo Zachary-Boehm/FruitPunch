@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: -1373171002146094978
     second: Watermelon Idle Spritesheet_5
+  - first:
+      213: -6293129214392404315
+    second: Watermelon Idle Spritesheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,11 +116,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,11 +137,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3000
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,11 +158,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6000
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +178,12 @@ TextureImporter:
       name: Watermelon Idle Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 6000
         y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +199,12 @@ TextureImporter:
       name: Watermelon Idle Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 9000
         y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +220,12 @@ TextureImporter:
       name: Watermelon Idle Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 6000
+        x: 12000
         y: 0
         width: 3000
         height: 3000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,6 +233,27 @@ TextureImporter:
       bones: []
       spriteID: e700739bf3481fce0800000000000000
       internalID: -1373171002146094978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watermelon Idle Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 15000
+        y: 0
+        width: 3000
+        height: 3000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6f18a62505aa8a0800000000000000
+      internalID: -6293129214392404315
       vertices: []
       indices: 
       edges: []

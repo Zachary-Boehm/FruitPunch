@@ -91,4 +91,10 @@ public class AnimationController : MonoBehaviour
         Variables.isAttacking = false;
         GetComponent<Attack>().AttackTarget();
     }
+
+    public void Death(int time)
+    {
+        Debug.Log("End of the line bucko");
+        Destroy(this.gameObject);
+    }
 }

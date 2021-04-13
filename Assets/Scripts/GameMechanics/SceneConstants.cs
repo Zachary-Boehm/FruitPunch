@@ -21,7 +21,7 @@ public static class SceneConstants
     static public string PunchChargeAnim = "PunchCharge";
     static public string PunchReleaseAnim = "PunchRelease";
     static public string Punch = "Punch";
-
+    static public string Death = "Death";
     static public MusicNames musicNames;
     static public FXNames fxNames;
 }
