@@ -13,17 +13,19 @@ public class SectionController : MonoBehaviour
     {
         if (other.isTrigger == false)
         {
-            //Check for null elements and remove them
-            List<GameObject> gameObjectList = new List<GameObject>(enemies);
-            for (int i = 0; i < enemies.Length; i++)
+            if (enemies.Length > 0)
             {
-                if (gameObjectList[i] == null)
+                //Check for null elements and remove them
+                List<GameObject> gameObjectList = new List<GameObject>(enemies);
+                for (int i = 0; i < enemies.Length; i++)
                 {
-                    gameObjectList.RemoveAt(i);
+                    if (gameObjectList[i] == null)
+                    {
+                        gameObjectList.RemoveAt(i);
+                    }
                 }
+                enemies = gameObjectList.ToArray();
             }
-            enemies = gameObjectList.ToArray();
-
             //Only allow the trigger to activate when all enemies are dead
             if (enemies.Length == 0)
             {
