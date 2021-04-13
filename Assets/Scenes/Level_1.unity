@@ -3432,9 +3432,9 @@ GameObject:
   - component: {fileID: 577050797}
   - component: {fileID: 577050798}
   - component: {fileID: 577050794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Watermelon Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3554,7 +3554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   weaponType: 0
   Weapon:
     name: 
@@ -3577,8 +3577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  hitColor: {r: 0, g: 0, b: 0, a: 0}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColor: {r: 0.9811321, g: 0.35635456, b: 0.35635456, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   Variables: {fileID: 0}
   HealthBar: {fileID: 684046281}
   animator: {fileID: 0}
@@ -3594,10 +3594,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 0
-  defaultHealth: 0
-  moveSpeed: 0
-  health: 5
+  defaultSpeed: 40
+  defaultHealth: 15
+  moveSpeed: 40
+  health: 15
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
   isAttacking: 0
