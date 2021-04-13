@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class SectionController : MonoBehaviour
 {
     [SerializeField] private Collider2D barrier;
@@ -13,19 +13,8 @@ public class SectionController : MonoBehaviour
     {
         if (other.isTrigger == false)
         {
-            if (enemies.Length > 0)
-            {
-                //Check for null elements and remove them
-                List<GameObject> gameObjectList = new List<GameObject>(enemies);
-                for (int i = 0; i < enemies.Length; i++)
-                {
-                    if (gameObjectList[i] == null)
-                    {
-                        gameObjectList.RemoveAt(i);
-                    }
-                }
-                enemies = gameObjectList.ToArray();
-            }
+            //Check for null elements and remove them
+            enemies = enemies.Where(x => x != null).ToArray();
             //Only allow the trigger to activate when all enemies are dead
             if (enemies.Length == 0)
             {
@@ -53,7 +42,7 @@ public class SectionController : MonoBehaviour
             {
                 GameManager.GAMEMANAGER.playMusic(AudioClip);
             }
-            foreach(GameObject o in itemsToTurnOn)
+            foreach (GameObject o in itemsToTurnOn)
             {
                 o.SetActive(true);
             }

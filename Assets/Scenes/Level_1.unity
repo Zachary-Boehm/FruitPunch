@@ -276,7 +276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5611702}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -968,14 +968,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Button Hit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &242394208
@@ -1206,7 +1222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271522648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -1712,7 +1728,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 342323309}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -3017,14 +3033,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Menu Click
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &526075434
@@ -4287,14 +4319,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Button Hit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &730768655
@@ -5214,7 +5262,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856371906}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -5581,7 +5629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896109226}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -6091,7 +6139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000544634}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -6970,14 +7018,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Button Hit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1246561081
@@ -7236,7 +7300,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273227891}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -8140,14 +8204,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Button Hit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1 &1478655375
@@ -8418,7 +8498,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488444460}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -8868,7 +8948,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571667659}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
@@ -11115,14 +11195,30 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1341363650}
           m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
-          m_MethodName: playButtonSound
-          m_Mode: 1
+          m_MethodName: playFX
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: Button Hit
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1341363650}
+          m_TargetAssemblyTypeName: PauseMenuController, Assembly-CSharp
+          m_MethodName: playFX
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Button Hit
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!95 &2050262981

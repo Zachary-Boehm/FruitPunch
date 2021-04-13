@@ -52,8 +52,8 @@ public class PauseMenuController : MonoBehaviour
         Application.Quit();
     }
 
-    public void playButtonSound()
+    public void playFX(string fxName)
     {
-        GameManager.GAMEMANAGER.playFX("Button Hit");
+        GameManager.GAMEMANAGER.playFX(fxName);
     }
 }

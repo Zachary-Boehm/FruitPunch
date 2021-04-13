@@ -40,8 +40,8 @@ public class MenuControls : MonoBehaviour
         GameManager.GAMEMANAGER.loadScene(SceneName.MainMenu);//load main menu
     }
 
-    public void playButtonHover()
+    public void playFX(string fxName)
     {
-        GameManager.GAMEMANAGER.playFX("Button Hit");
+        GameManager.GAMEMANAGER.playFX(fxName);
     }
 }
