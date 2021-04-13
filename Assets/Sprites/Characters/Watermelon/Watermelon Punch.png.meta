@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 1dbef908c4eeb7842a6a5f44f566482d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7630236422946163422
+    second: Watermelon Punch_0
+  - first:
+      213: -7757238071354593464
+    second: Watermelon Punch_1
+  - first:
+      213: 8585484995502966689
+    second: Watermelon Punch_2
+  - first:
+      213: 3124988239649323903
+    second: Watermelon Punch_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +101,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Watermelon Punch_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3000
+        width: 3500
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda04f5999b04e960800000000000000
+      internalID: 7630236422946163422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watermelon Punch_1
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3000
+        width: 3500
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fe5ced211c85490800000000000000
+      internalID: -7757238071354593464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watermelon Punch_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3500
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a786659d15c52770800000000000000
+      internalID: 8585484995502966689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Watermelon Punch_3
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 0
+        width: 3500
+        height: 3000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b329f3f303e5b20800000000000000
+      internalID: 3124988239649323903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

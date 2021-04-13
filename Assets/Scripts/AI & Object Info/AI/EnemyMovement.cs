@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
                 Direction = Vector2.zero;
                 movement = Vector3.zero;
                 Attack aScript = GetComponent<Attack>();
-                if (canAttack == false && aScript)
+                if (canAttack == false && aScript && !Variables.isAttacking)
                 {
                     if (aScript.enabled == true)
                     {

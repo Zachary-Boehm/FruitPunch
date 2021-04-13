@@ -370,9 +370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -393,7 +393,7 @@ MonoBehaviour:
   Variables: {fileID: 5611712}
   Attack: {fileID: 5611708}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &24635653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,9 +1316,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -1339,7 +1339,7 @@ MonoBehaviour:
   Variables: {fileID: 271522658}
   Attack: {fileID: 271522654}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &272320816
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,9 +1822,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   Variables: {fileID: 342323319}
   Attack: {fileID: 342323315}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &352161980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,7 +1943,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.6349335, y: 0.4917872}
+  m_Offset: {x: 2.6349335, y: 0.5801507}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1954,7 +1954,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 213.56766, y: 0.743536}
+  m_Size: {x: 213.56766, y: 0.56680894}
   m_EdgeRadius: 0
 --- !u!61 &352161984
 BoxCollider2D:
@@ -2869,7 +2869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &482983667
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3432,6 +3432,7 @@ GameObject:
   - component: {fileID: 577050797}
   - component: {fileID: 577050798}
   - component: {fileID: 577050794}
+  - component: {fileID: 577050799}
   m_Layer: 7
   m_Name: Watermelon Boss
   m_TagString: Enemy
@@ -3449,7 +3450,7 @@ Animator:
   m_GameObject: {fileID: 577050789}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 967744eca9c639a4c9398c3efed9f405, type: 2}
+  m_Controller: {fileID: 9100000, guid: 75d5c98982356b643bb2596d19a9a621, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3648,6 +3649,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &577050799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577050789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e667cba62340a448a1008232a2f0cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldDir: {x: 0, y: 0}
+  newDir: {x: 0, y: 0}
+  animator: {fileID: 577050790}
+  flipMode: 0
+  AnimLabel: Watermelon_
+  idling: 1
+  currentAnim: Idle
 --- !u!1 &601836749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,9 +5376,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -5379,7 +5399,7 @@ MonoBehaviour:
   Variables: {fileID: 856371916}
   Attack: {fileID: 856371912}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &876095624
 GameObject:
   m_ObjectHideFlags: 0
@@ -5723,9 +5743,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -5746,7 +5766,7 @@ MonoBehaviour:
   Variables: {fileID: 896109236}
   Attack: {fileID: 896109232}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &898851996
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,9 +6253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -6256,7 +6276,7 @@ MonoBehaviour:
   Variables: {fileID: 1000544644}
   Attack: {fileID: 1000544640}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &1004178182
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,9 +7414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -7417,7 +7437,7 @@ MonoBehaviour:
   Variables: {fileID: 1273227901}
   Attack: {fileID: 1273227897}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &1303695013
 GameObject:
   m_ObjectHideFlags: 0
@@ -8592,9 +8612,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -8615,7 +8635,7 @@ MonoBehaviour:
   Variables: {fileID: 1488444470}
   Attack: {fileID: 1488444466}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!4 &1491864056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8323302229840780603, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
@@ -9042,9 +9062,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -9065,7 +9085,7 @@ MonoBehaviour:
   Variables: {fileID: 1571667669}
   Attack: {fileID: 1571667665}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!1 &1592669824
 GameObject:
   m_ObjectHideFlags: 0
@@ -9876,9 +9896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de4a1ab2ed68f32418c0cc13f75c3ff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSpeed: 50
+  defaultSpeed: 10
   defaultHealth: 6
-  moveSpeed: 50
+  moveSpeed: 10
   health: 6
   Direction: {x: 0, y: 0}
   AttackDirection: {x: 0, y: 0}
@@ -9899,7 +9919,7 @@ MonoBehaviour:
   Variables: {fileID: 1790491150}
   Attack: {fileID: 1790491146}
   Direction: {x: 0, y: 0}
-  cooldown: 2.5
+  cooldown: 1.25
 --- !u!4 &1790491152
 Transform:
   m_ObjectHideFlags: 0
@@ -10445,6 +10465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900735602}
   - component: {fileID: 1900735603}
+  - component: {fileID: 1900735604}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -10496,6 +10517,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 2.547367, y: 15.207626}
+  m_EdgeRadius: 0
+--- !u!61 &1900735604
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900735601}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 227.96591, y: -7.152646}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5159912, y: 15.30529}
   m_EdgeRadius: 0
 --- !u!1 &1912064985
 GameObject:
@@ -11476,6 +11523,14 @@ PrefabInstance:
       propertyPath: AnimLabel
       value: Tomato_
       objectReference: {fileID: 0}
+    - target: {fileID: 8323302227939112831, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323302227939112831, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780594, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11565,8 +11620,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780602, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323302229840780602, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8323302229840780602, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780603, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: m_RootOrder
