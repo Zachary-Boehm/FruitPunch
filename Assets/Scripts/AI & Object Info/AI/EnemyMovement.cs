@@ -36,12 +36,16 @@ public class EnemyMovement : MonoBehaviour
             {
                 Direction = Vector2.zero;
                 movement = Vector3.zero;
-                if(canAttack == false)
+                Attack aScript = GetComponent<Attack>();
+                if (canAttack == false && aScript)
                 {
-                    Debug.Log("attack player");
-                    GetComponent<AnimationController>().ChangeAnim(SceneConstants.Punch);
-                    StartCoroutine(attackCooldown());
-                    canAttack = true;
+                    if (aScript.enabled == true)
+                    {
+                        Debug.Log("attack player");
+                        GetComponent<AnimationController>().ChangeAnim(SceneConstants.Punch);
+                        StartCoroutine(attackCooldown());
+                        canAttack = true;
+                    }
                 }
             }
 
