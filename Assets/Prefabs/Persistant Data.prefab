@@ -392,6 +392,7 @@ MonoBehaviour:
   music:
   - {fileID: 8300000, guid: 35688ff55454db64ebebfcab4e2356c0, type: 3}
   - {fileID: 8300000, guid: a571071729c212e4db10f6f78fe4fd63, type: 3}
+  - {fileID: 8300000, guid: 171f4f5994fae994399853ae4127bb80, type: 3}
   Mixer: {fileID: 24100000, guid: 2920dab87d336d641ac71868beb0ced4, type: 2}
 --- !u!1 &1000585184379781713
 GameObject:
