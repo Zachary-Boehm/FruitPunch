@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public Transform Player;
     //int MaxDist = 10;
-    int MinDist = 10;
+    int MinDist = 5;
     [SerializeField]private ActorVariables Variables;
     [SerializeField] private Attack Attack;
     bool isChasing = false;
