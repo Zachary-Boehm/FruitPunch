@@ -45,6 +45,8 @@ public class Attack : MonoBehaviour
             //if hit is not null
             if (hit)
             {
+                //Play punch sound
+                GameManager.GAMEMANAGER.playFX("Punch 02");
                 DealDamage(hit.collider.gameObject);//Deal damage to the hit target
                 canAttack = false;//The attack is now finished
             }

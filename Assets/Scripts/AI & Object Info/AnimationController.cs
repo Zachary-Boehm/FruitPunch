@@ -94,7 +94,6 @@ public class AnimationController : MonoBehaviour
 
     public void Death(int time)
     {
-        Debug.Log("End of the line bucko");
         Destroy(this.gameObject);
     }
 }
