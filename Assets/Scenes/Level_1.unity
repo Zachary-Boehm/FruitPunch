@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5611703
 Transform:
   m_ObjectHideFlags: 0
@@ -1094,7 +1094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &271522649
 Transform:
   m_ObjectHideFlags: 0
@@ -1600,7 +1600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &342323310
 Transform:
   m_ObjectHideFlags: 0
@@ -3432,6 +3432,7 @@ GameObject:
   - component: {fileID: 577050797}
   - component: {fileID: 577050798}
   - component: {fileID: 577050794}
+  - component: {fileID: 577050799}
   m_Layer: 7
   m_Name: Watermelon Boss
   m_TagString: Enemy
@@ -3648,6 +3649,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &577050799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577050789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e667cba62340a448a1008232a2f0cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oldDir: {x: 0, y: 0}
+  newDir: {x: 0, y: 0}
+  animator: {fileID: 0}
+  flipMode: 0
+  AnimLabel: 
+  idling: 1
+  currentAnim: Idle
 --- !u!1 &601836749
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,7 +5154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &856371907
 Transform:
   m_ObjectHideFlags: 0
@@ -5501,7 +5521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &896109227
 Transform:
   m_ObjectHideFlags: 0
@@ -6011,7 +6031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1000544635
 Transform:
   m_ObjectHideFlags: 0
@@ -7172,7 +7192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1273227892
 Transform:
   m_ObjectHideFlags: 0
@@ -8370,7 +8390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1488444461
 Transform:
   m_ObjectHideFlags: 0
@@ -8820,7 +8840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1571667660
 Transform:
   m_ObjectHideFlags: 0
@@ -9669,7 +9689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!70 &1790491142
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11582,7 +11602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780603, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.7
+      value: 185.7
       objectReference: {fileID: 0}
     - target: {fileID: 8323302229840780603, guid: 76d5b9dc7c673544f8cac3b361981ae0, type: 3}
       propertyPath: m_LocalPosition.y

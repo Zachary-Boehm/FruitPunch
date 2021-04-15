@@ -31,15 +31,17 @@ public class BossAtack : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         if (canAttack)
         {
+            Debug.Log("Can attack");
             //!Get the direction of the player's movement, then apply that to the direction of attack
             //Do a ray cast and store the collisions in the hit variable
             RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), Weapon.getAttackRange(), TargetLayer);
             //if hit is not null
             if (hit)
             {
+                Debug.Log("Hit");
                 DealDamage(hit.collider.gameObject);//Deal damage to the hit target
                 canAttack = false;//The attack is now finished
             }

@@ -91,6 +91,13 @@ public class AnimationController : MonoBehaviour
         Variables.isAttacking = false;
         GetComponent<Attack>().AttackTarget();
     }
+    public void BossEndAnimation(string nextAnimation)
+    {
+        ChangeAnim(nextAnimation);
+        oldDir = Vector2.zero;
+        Variables.isAttacking = false;
+        GetComponent<Attack>().AttackTarget();
+    }
 
     public void Death(int time)
     {
