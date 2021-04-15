@@ -84,7 +84,7 @@ public class AnimationController : MonoBehaviour
         Variables.isAttacking = false;
     }
 
-    public void GrapeEndAnimation(string nextAnimation)
+    public void AttackEndAnimation(string nextAnimation)
     {
         ChangeAnim(nextAnimation);
         oldDir = Vector2.zero;

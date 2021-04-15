@@ -13,6 +13,7 @@ public class Attack : MonoBehaviour
     [SerializeField] private LayerMask targetLayer;//The layer that will interact with the physics ray cast
 
     [Header("Weapon Details")]
+    [SerializeField] private Transform attackLocation;
     [SerializeField] private WeaponType weaponType; //The weapon type that is to be used for this object
     [SerializeField] private Weapon weapon;//The gameobject weapon of this object. It will hold the damage Script
     private float Multiplier = 1;//Damage multiplier
@@ -41,7 +42,7 @@ public class Attack : MonoBehaviour
         {
             //!Get the direction of the player's movement, then apply that to the direction of attack
             //Do a ray cast and store the collisions in the hit variable
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), weapon.getAttackRange(), targetLayer);
+            RaycastHit2D hit = Physics2D.Raycast(attackLocation.position, transform.TransformDirection(Variables.AttackDirection), weapon.getAttackRange(), targetLayer);
             //if hit is not null
             if (hit)
             {
