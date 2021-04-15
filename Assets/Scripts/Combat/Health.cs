@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
     public void Damage(Weapon _weapon, float _damage = -1)
     {
         //Find what the new health will be after the damage is taken
+        
         float newHealth;
         if (_damage == -1)
         {
@@ -58,6 +59,7 @@ public class Health : MonoBehaviour
             StartCoroutine(FlashRed());
             Variables.isAttacking = true;
             GetComponent<AnimationController>().ChangeAnim(SceneConstants.Death);
+            GameManager.GAMEMANAGER.playFX("Squish Punch 2");
         }
         else
         { //Else if the health is above 0

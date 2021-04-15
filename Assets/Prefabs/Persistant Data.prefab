@@ -389,11 +389,11 @@ MonoBehaviour:
   - {fileID: 1750655720571021050}
   fx:
   - {fileID: 8300000, guid: 004f29b6fb2675543b52dd31437527f9, type: 3}
-  - {fileID: 8300000, guid: 335ba00c2315aa3479be68de0a78aeaa, type: 3}
-  - {fileID: 8300000, guid: 1dd30420dabf9a64b9c860c9fedcf90a, type: 3}
   - {fileID: 8300000, guid: c0f4097085506b94083d1a89eb5f20ee, type: 3}
   - {fileID: 8300000, guid: 129e81aa5113d6e4ab8686a0e6c65636, type: 3}
   - {fileID: 8300000, guid: b4a6b518b8d009f42b7d44a700de40ac, type: 3}
+  - {fileID: 8300000, guid: 1dd30420dabf9a64b9c860c9fedcf90a, type: 3}
+  - {fileID: 8300000, guid: 920cd77250558194d9f74aed1f314906, type: 3}
   music:
   - {fileID: 8300000, guid: 35688ff55454db64ebebfcab4e2356c0, type: 3}
   - {fileID: 8300000, guid: a571071729c212e4db10f6f78fe4fd63, type: 3}

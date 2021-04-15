@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
             AttackPressed = false;
             //Button Released
             releaseAttack();
-            StartCoroutine(AttackCooldown(1.0f));
+            StartCoroutine(AttackCooldown(0.5f));
         }
     }
 
