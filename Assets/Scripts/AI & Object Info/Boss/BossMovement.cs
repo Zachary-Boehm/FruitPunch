@@ -14,15 +14,15 @@ public class BossMovement : MonoBehaviour
     bool canAttack = false;
     Vector3 movement = Vector3.zero;
     [SerializeField] private Vector2 Direction;
-    int enemyTotal;
 
     [SerializeField] private float cooldown;
     void Update()
     {
-        enemyTotal = 0;
-        countEnemies();
+        int enemyTotal = 0;
+        enemyTotal = countEnemies();
+        Debug.Log(enemyTotal);
         float enemyDistance = Vector3.Distance(transform.position, Player.position);
-        if (enemyTotal == 0)
+        if (enemyTotal == 1)
         {
             if (enemyDistance <= 30 && isChasing == false)
             {
@@ -41,6 +41,7 @@ public class BossMovement : MonoBehaviour
                 {
                     Direction = Vector2.zero;
                     movement = Vector3.zero;
+                    Attack aScript = GetComponent<Attack>();
                     if (canAttack == false)
                     {
                         Debug.Log("attack player");
@@ -73,6 +74,7 @@ public class BossMovement : MonoBehaviour
 
     int countEnemies()
     {
+        int enemyTotal = 0;
         //I know that the GameObject.Find(...) should be proper, I'm just trying to make a good for each loop
         foreach (GameObject Enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
