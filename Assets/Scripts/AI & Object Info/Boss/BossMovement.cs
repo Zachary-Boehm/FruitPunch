@@ -18,11 +18,11 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private float cooldown;
     void Update()
     {
-        int enemyTotal = 0;
-        enemyTotal = countEnemies();
-        Debug.Log(enemyTotal);
+        //int enemyTotal = 0;
+        //enemyTotal = countEnemies();
+        //Debug.Log(enemyTotal);
         float enemyDistance = Vector3.Distance(transform.position, Player.position);
-        if (enemyTotal == 1)
+        if (true)
         {
             if (enemyDistance <= 30 && isChasing == false)
             {
@@ -43,7 +43,7 @@ public class BossMovement : MonoBehaviour
                     Direction = Vector2.zero;
                     movement = Vector3.zero;
                     Attack aScript = GetComponent<Attack>();
-                    if (canAttack == false)
+                    if (canAttack == false && Variables.isAttacking == false)
                     {
                         Debug.Log("attack player");
                         GetComponent<AnimationController>().ChangeAnim(SceneConstants.Punch);
