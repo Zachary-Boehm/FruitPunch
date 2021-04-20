@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Watermelon_Idle
+  m_Name: WaterMelon_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -26,12 +26,10 @@ AnimationClip:
     - time: 0.16666667
       value: {fileID: -9118457072982590317, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - time: 0.25
-      value: {fileID: 5625674615528320348, guid: e61907574dc2d604f95270f129690d96, type: 3}
-    - time: 0.33333334
       value: {fileID: 4018810477097086698, guid: e61907574dc2d604f95270f129690d96, type: 3}
-    - time: 0.41666666
+    - time: 0.33333334
       value: {fileID: -1373171002146094978, guid: e61907574dc2d604f95270f129690d96, type: 3}
-    - time: 0.5
+    - time: 0.41666666
       value: {fileID: -6293129214392404315, guid: e61907574dc2d604f95270f129690d96, type: 3}
     attribute: m_Sprite
     path: 
@@ -55,7 +53,6 @@ AnimationClip:
     - {fileID: -3368077297635491419, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - {fileID: 4423026825398277317, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - {fileID: -9118457072982590317, guid: e61907574dc2d604f95270f129690d96, type: 3}
-    - {fileID: 5625674615528320348, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - {fileID: 4018810477097086698, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - {fileID: -1373171002146094978, guid: e61907574dc2d604f95270f129690d96, type: 3}
     - {fileID: -6293129214392404315, guid: e61907574dc2d604f95270f129690d96, type: 3}
@@ -64,7 +61,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5833333
+    m_StopTime: 0.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

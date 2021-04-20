@@ -2628,7 +2628,7 @@ MonoBehaviour:
   TargetLayer:
     serializedVersion: 2
     m_Bits: 64
-  weaponType: 0
+  weaponType: 2
   Weapon:
     name: 
     damageAffect: 0

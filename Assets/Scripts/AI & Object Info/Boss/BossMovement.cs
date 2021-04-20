@@ -36,6 +36,7 @@ public class BossMovement : MonoBehaviour
                     Direction = (Player.position - transform.position).normalized;
                     movement = Direction * Variables.moveSpeed * Time.deltaTime;
                     movement.z = 0;
+                    Debug.Log("Boss is moving");
                 }
                 else
                 {
