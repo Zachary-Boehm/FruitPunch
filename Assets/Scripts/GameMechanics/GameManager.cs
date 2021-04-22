@@ -79,12 +79,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene((int)scene);
         if(scene == SceneName.MainMenu)
         {
-            playMusic("Menu Music");
+            playMusic(SceneConstants.musicNames.getMain());
             canMove = false;
         }
         if(scene == SceneName.Level_1)
         {
-            playMusic("General Theme");
+            playMusic(SceneConstants.musicNames.getLevel1());
         }
     }
 

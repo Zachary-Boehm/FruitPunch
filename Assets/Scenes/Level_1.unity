@@ -7170,7 +7170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barrier: {fileID: 1787014520}
   trigger: {fileID: 1787014521}
-  AudioClip: Boss Music
+  AudioClip: Froot Punch_Boss Music_FINAL.1
   enemies: []
   itemsToTurnOn:
   - {fileID: 684046278}

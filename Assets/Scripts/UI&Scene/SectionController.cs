@@ -38,9 +38,9 @@ public class SectionController : MonoBehaviour
 
             trigger.enabled = false;
 
-            if (AudioClip != null)
+            if (AudioClip != "")
             {
-                GameManager.GAMEMANAGER.playMusic(AudioClip);
+                GameManager.GAMEMANAGER.playMusic(SceneConstants.musicNames.getBoss());
             }
             foreach (GameObject o in itemsToTurnOn)
             {

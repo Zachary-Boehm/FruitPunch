@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 478036993308078275, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: fx.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 47caf3212c553f048814a16c97c92c90, type: 3}
+    - target: {fileID: 478036993308078275, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: music.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 781d353fb59e7484e8b503b40e829e6a, type: 3}
+    - target: {fileID: 478036993308078275, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: music.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3410571449aec6a4ab1053359dbfcc6a, type: 3}
+    - target: {fileID: 478036993308078275, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: music.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 17b4a8687ee25d34e9f1eb6d764b553b, type: 3}
     - target: {fileID: 562296242459809424, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_RootOrder
       value: 1
