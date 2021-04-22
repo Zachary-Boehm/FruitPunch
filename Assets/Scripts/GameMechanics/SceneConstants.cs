@@ -4,8 +4,22 @@ using UnityEngine;
 
 public struct MusicNames //struct that has reference to name of sound clips
 {
-    public static string MainMenu = "Menu Music";
-    public static string Level1 = "General THeme";
+    public static string MainMenu = "Froot Punch_Menu Music_FINAL.1";
+    public static string Level1 = "Froot Punch_Main Music_FINAL.1";
+    public static string BossMusic = "Froot Punch_Boss Music_FINAL.1";
+
+    public string getMain()
+    {
+        return MainMenu;
+    }
+    public string getLevel1()
+    {
+        return Level1;
+    }
+    public string getBoss()
+    {
+        return BossMusic;
+    }
 }
 
 
@@ -22,7 +36,7 @@ public static class SceneConstants
     static public string PunchReleaseAnim = "PunchRelease";
     static public string Punch = "Punch";
     static public string Death = "Death";
-    static public MusicNames musicNames;
+    static public MusicNames musicNames = new MusicNames();
     static public FXNames fxNames;
 }
 
