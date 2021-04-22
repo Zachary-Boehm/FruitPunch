@@ -11,6 +11,7 @@ public class BossAtack : MonoBehaviour
     [SerializeField] private WeaponType weaponType; //The weapon type that is to be used for this object
     [SerializeField] private Weapon Weapon;//The gameobject weapon of this object. It will hold the damage Script
     private float Multiplier = 1;//Damage multiplier
+    [SerializeField] private Transform attackLocation;
     private void Start()
     {
         //Grab the weapon information from the Game Manager
@@ -37,7 +38,7 @@ public class BossAtack : MonoBehaviour
             Debug.Log("Can attack");
             //!Get the direction of the player's movement, then apply that to the direction of attack
             //Do a ray cast and store the collisions in the hit variable
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Variables.AttackDirection), Weapon.getAttackRange(), TargetLayer);
+            RaycastHit2D hit = Physics2D.Raycast(attackLocation.position, transform.TransformDirection(Variables.AttackDirection), Weapon.getAttackRange(), TargetLayer);
             //if hit is not null
             if (hit)
             {

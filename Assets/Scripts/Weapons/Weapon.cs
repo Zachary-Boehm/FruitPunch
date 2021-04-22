@@ -61,4 +61,5 @@ public enum WeaponType
     Fist = 0, //The fist weapon
     GrapeFist = 1, //The weapon for the grape
     PearFist = 2, //The weapon for the pear
+    BossFist = 3 //Boss weapon
 }
