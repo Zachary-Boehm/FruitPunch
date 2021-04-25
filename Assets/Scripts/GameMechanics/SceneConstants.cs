@@ -26,6 +26,22 @@ public struct MusicNames //struct that has reference to name of sound clips
 public struct FXNames //struct that has reference to name of sound clips
 {
     public static string ButtonHover = "Button Hit";
+    public static string Defeat = "Defeat-3";
+    public static string Victory = "Victory-3";
+    public string getButtonHit()
+    {
+        return ButtonHover;
+    }
+
+    public string getDefeat()
+    {
+        return Defeat;
+    }
+
+    public string getVictory()
+    {
+        return Victory;
+    }
 }
 public static class SceneConstants
 {

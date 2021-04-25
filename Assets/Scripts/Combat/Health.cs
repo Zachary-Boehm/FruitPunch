@@ -60,6 +60,16 @@ public class Health : MonoBehaviour
             Variables.isAttacking = true;
             GetComponent<AnimationController>().ChangeAnim(SceneConstants.Death);
             GameManager.GAMEMANAGER.playFX("Squish Punch 2");
+            //Check what died and play correct win / loss screen
+            switch(this.name)
+            {
+                case "Player":
+                    GameManager.GAMEMANAGER.failGame();
+                    break;
+                case "Watermelon Boss":
+                    GameManager.GAMEMANAGER.winGame();
+                    break;
+            }
         }
         else
         { //Else if the health is above 0

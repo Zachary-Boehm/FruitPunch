@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float soundFXVolume; //percent of FX volume
     [Range(0.00f, 1.00f)]//Adds a slider into the inspector for Music volume
     [SerializeField] private float musicVolume; //percent of Music volume
+    [SerializeField] private WinLossController gameEndController;
 
     [Header("Json Data")]
     public TextAsset weaponDataFile;
@@ -163,6 +164,10 @@ public class GameManager : MonoBehaviour
         soundManager.playMusic(musicName);
     }
 
+    public void stopMusic()
+    {
+        soundManager.stopMusic();
+    }
     public void updateFXVolume()
     {
         foreach(Slider s in VolumeSliders)
@@ -217,7 +222,15 @@ public class GameManager : MonoBehaviour
         settingsMenu.SetActive(false);
     }
 
-    
+    public void winGame()
+    {
+        gameEndController.ActivateWin();
+    }
+
+    public void failGame()
+    {
+        gameEndController.ActivateLoss();
+    }
 }
 
 [System.Serializable]

@@ -15,11 +15,11 @@ public class Parallax : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition; //Change in camera position
         //Move object by change in camera position * amount of parallax
-        transform.position += new Vector3(deltaMovement.x * parallaxAmount.x, deltaMovement.y * parallaxAmount.y, deltaMovement.z);
+        transform.position += new Vector3(deltaMovement.x * parallaxAmount.x, deltaMovement.y * parallaxAmount.y, 0);
         lastCameraPosition = cameraTransform.position; //Update last camera position
     }
 }

@@ -50,5 +50,8 @@ public class AudioManager : MonoBehaviour
         sources[audioSource].volume = volume;
     }
 
-    
+    public void stopMusic()
+    {
+        sources[1].Stop();
+    }
 }

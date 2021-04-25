@@ -177,6 +177,7 @@ MonoBehaviour:
   settingsMenu: {fileID: 5981276346208686331}
   soundFXVolume: 0.5
   musicVolume: 0.5
+  gameEndController: {fileID: 1652916724096340237}
   weaponDataFile: {fileID: 4900000, guid: 7bd4d5a41c7e51f4b87afd7556c87306, type: 3}
   gameDataFile: {fileID: 4900000, guid: 0aadc1d5ac73d6c49bea2e4df4f3aa45, type: 3}
   WeaponsList:
@@ -393,12 +394,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c0f4097085506b94083d1a89eb5f20ee, type: 3}
   - {fileID: 8300000, guid: 129e81aa5113d6e4ab8686a0e6c65636, type: 3}
   - {fileID: 8300000, guid: b4a6b518b8d009f42b7d44a700de40ac, type: 3}
-  - {fileID: 8300000, guid: 1dd30420dabf9a64b9c860c9fedcf90a, type: 3}
+  - {fileID: 8300000, guid: 47caf3212c553f048814a16c97c92c90, type: 3}
   - {fileID: 8300000, guid: 920cd77250558194d9f74aed1f314906, type: 3}
+  - {fileID: 8300000, guid: 808728daa309d8446984f8db6cd3dda3, type: 3}
+  - {fileID: 8300000, guid: b4e972a03c0150146882a89ac50305de, type: 3}
+  - {fileID: 8300000, guid: eca64539ff785d043a1bc95a637a1e27, type: 3}
   music:
-  - {fileID: 8300000, guid: 35688ff55454db64ebebfcab4e2356c0, type: 3}
-  - {fileID: 8300000, guid: a571071729c212e4db10f6f78fe4fd63, type: 3}
-  - {fileID: 8300000, guid: 171f4f5994fae994399853ae4127bb80, type: 3}
+  - {fileID: 8300000, guid: 781d353fb59e7484e8b503b40e829e6a, type: 3}
+  - {fileID: 8300000, guid: 3410571449aec6a4ab1053359dbfcc6a, type: 3}
+  - {fileID: 8300000, guid: 17b4a8687ee25d34e9f1eb6d764b553b, type: 3}
   Mixer: {fileID: 24100000, guid: 2920dab87d336d641ac71868beb0ced4, type: 2}
 --- !u!1 &1000585184379781713
 GameObject:
@@ -562,6 +566,8 @@ GameObject:
   - component: {fileID: 6012689660768177947}
   - component: {fileID: 6008872387383203626}
   - component: {fileID: 5720375098013576376}
+  - component: {fileID: 1652916724096340237}
+  - component: {fileID: 4062733339170159544}
   m_Layer: 0
   m_Name: Win_Loss
   m_TagString: Untagged
@@ -650,6 +656,39 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1652916724096340237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317455730313606322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b6fdda086ee0c4c911ef0fab8c505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: {fileID: 0}
+  WinLossAnimation: {fileID: 4062733339170159544}
+--- !u!95 &4062733339170159544
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317455730313606322}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 409b3a886fc02da40bbd47598548bb2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2652403540328227722
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,88 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8323302227939112801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8323302227939112828}
-  - component: {fileID: 8323302227939112831}
-  - component: {fileID: 8323302227939112830}
-  m_Layer: 6
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8323302227939112828
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323302227939112801}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 3, z: -30}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8323302229840780603}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &8323302227939112831
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323302227939112801}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 16
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &8323302227939112830
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323302227939112801}
-  m_Enabled: 1
 --- !u!1 &8323302229840780607
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +16,6 @@ GameObject:
   - component: {fileID: 8323302229840780596}
   - component: {fileID: 8323302229840780598}
   - component: {fileID: 8323302229840780599}
-  - component: {fileID: 8323302229840780594}
   - component: {fileID: 8323302229840780597}
   - component: {fileID: 8323302229840780600}
   - component: {fileID: 7288569245300100879}
@@ -120,8 +36,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.7022, y: -5.8333, z: 0}
   m_LocalScale: {x: 1.0836, y: 1.0027, z: 1}
-  m_Children:
-  - {fileID: 8323302227939112828}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -213,7 +128,7 @@ BoxCollider2D:
   m_Offset: {x: 0.2856704, y: -3.6571329}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 10, y: 10}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
@@ -271,7 +186,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
   Variables: {fileID: 8323302229840780599}
+  HealthBar: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &8323302229840780599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,18 +208,8 @@ MonoBehaviour:
   moveSpeed: 550
   health: 10
   Direction: {x: 0, y: 0}
---- !u!114 &8323302229840780594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323302229840780607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fe4607982e5cd84d965fa0bead63a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  AttackDirection: {x: 0, y: 0}
+  isAttacking: 0
 --- !u!114 &8323302229840780597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +227,8 @@ MonoBehaviour:
   Transform: {fileID: 0}
   PlayerRigidBody: {fileID: 0}
   direction: {x: 0, y: 0}
+  chargeMultiplier: 0
+  chargeTime: 0
 --- !u!114 &8323302229840780600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,10 +241,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ff1f9b3cc0966439af4e5a4a9e74b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetLayer:
+  targetLayer:
     serializedVersion: 2
-    m_Bits: 128
-  Weapon: {fileID: 11400000, guid: 7ed0be58459ec9f41b00d2be3742b14d, type: 2}
+    m_Bits: 0
+  attackLocation: {fileID: 0}
+  weaponType: 0
+  weapon:
+    name: 
+    damageAffect: 0
+    effectDuration: 0
+    bleedAmount: 0
+    damage: 0
+    attackDuration: 0
+    attackRange: 0
 --- !u!114 &7288569245300100879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,3 +270,6 @@ MonoBehaviour:
   newDir: {x: 0, y: 0}
   animator: {fileID: 0}
   flipMode: 1
+  AnimLabel: 
+  idling: 1
+  currentAnim: Idle
