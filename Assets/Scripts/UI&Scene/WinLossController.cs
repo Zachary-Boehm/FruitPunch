@@ -40,7 +40,14 @@ public class WinLossController : MonoBehaviour
     }
 
     public void loadScene(int sceneName){
-        WinLossAnimation.Play("Base Layer." + "FadeOut", 0);
+        if(activeState == VICTORY)
+        {
+            WinLossAnimation.Play("Base Layer." + VICTORY + "_FadeOut", 0);
+        }else
+        {
+            WinLossAnimation.Play("Base Layer." + FAILURE + "_FadeOut", 0);
+        }
+        
         GameManager.GAMEMANAGER.loadScene((SceneName)sceneName); //Start coroutine to load in new scene
     }
 }

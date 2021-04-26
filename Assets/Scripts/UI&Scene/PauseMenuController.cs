@@ -47,9 +47,9 @@ public class PauseMenuController : MonoBehaviour
     }
 
     //Quits the game
-    public void quit()
+    public void toggleControls()
     {
-        Application.Quit();
+        GameManager.GAMEMANAGER.toggleControls();
     }
 
     public void playFX(string fxName)

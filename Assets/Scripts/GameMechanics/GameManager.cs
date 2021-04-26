@@ -14,7 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Slider[] VolumeSliders;
 
     [Header("Menu's and Loading Screen")]
-    [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private Canvas loadingScreen;
+    [SerializeField] private Canvas Controls;
+    [SerializeField] private Canvas Credits;
     [SerializeField] private GameObject settingsMenu;
 
     [Header("Menu Variables")]
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("Loading next scene");
         if(withLoadingScreen)
         {
+            loadingScreen.transform.parent.GetComponent<Animator>().Play("Base Layer." + "Loading_FadeIn", 0);
             StartCoroutine(LoadingScreen());
         }
         SceneManager.LoadScene((int)scene);
@@ -91,9 +94,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadingScreen()
     {
-        loadingScreen.SetActive(true);
         yield return new WaitForSeconds(5f);
-        loadingScreen.SetActive(false);
+        loadingScreen.transform.parent.GetComponent<Animator>().Play("Base Layer." + "Loading_FadeOut", 0);
     }
 
 
@@ -227,6 +229,15 @@ public class GameManager : MonoBehaviour
         gameEndController.ActivateWin();
     }
 
+    public void toggleControls()
+    {
+        Controls.enabled = !Controls.isActiveAndEnabled;
+    }
+
+    public void toggleCredits()
+    {
+        Credits.enabled = !Credits.isActiveAndEnabled;
+    }
     public void failGame()
     {
         gameEndController.ActivateLoss();
