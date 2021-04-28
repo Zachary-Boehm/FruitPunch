@@ -585,6 +585,8 @@ AnimationClip:
       value: {fileID: -3522915242921430815, guid: 59b3453994d220e4a85bf917aed7138b, type: 3}
     - time: 2.0666666
       value: {fileID: -6522712441086125755, guid: 59b3453994d220e4a85bf917aed7138b, type: 3}
+    - time: 2.1333334
+      value: {fileID: 21300000, guid: 092aaf8481221b940b3dbe3516118d3e, type: 3}
     attribute: m_Sprite
     path: Panel/FruitWorks/Fruit(1)
     classID: 114
@@ -737,12 +739,13 @@ AnimationClip:
     - {fileID: 4911492805247444751, guid: 59b3453994d220e4a85bf917aed7138b, type: 3}
     - {fileID: -3522915242921430815, guid: 59b3453994d220e4a85bf917aed7138b, type: 3}
     - {fileID: -6522712441086125755, guid: 59b3453994d220e4a85bf917aed7138b, type: 3}
+    - {fileID: 21300000, guid: 092aaf8481221b940b3dbe3516118d3e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 2.1333332
+    m_StopTime: 2.2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

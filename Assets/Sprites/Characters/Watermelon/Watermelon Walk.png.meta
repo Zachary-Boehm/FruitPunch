@@ -131,7 +131,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 7
@@ -152,7 +152,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3000
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 7
@@ -173,7 +173,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6000
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 7
@@ -194,7 +194,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9000
-        y: 3000
+        y: 0
         width: 3000
         height: 3000
       alignment: 7
@@ -214,12 +214,12 @@ TextureImporter:
       name: Watermelon Walk_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 12000
         y: 0
         width: 3000
         height: 3000
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: Watermelon Walk_5
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 15000
         y: 0
         width: 3000
         height: 3000
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,12 +256,12 @@ TextureImporter:
       name: Watermelon Walk_6
       rect:
         serializedVersion: 2
-        x: 6000
+        x: 18000
         y: 0
         width: 3000
         height: 3000
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -277,12 +277,12 @@ TextureImporter:
       name: Watermelon Walk_7
       rect:
         serializedVersion: 2
-        x: 9000
+        x: 21000
         y: 0
         width: 3000
         height: 3000
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

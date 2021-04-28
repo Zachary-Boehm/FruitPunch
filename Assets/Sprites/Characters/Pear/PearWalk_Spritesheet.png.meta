@@ -131,7 +131,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7
@@ -152,7 +152,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2000
-        y: 2000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7
@@ -173,7 +173,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4000
-        y: 2000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7
@@ -194,7 +194,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6000
-        y: 2000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7
@@ -214,7 +214,7 @@ TextureImporter:
       name: PearWalk_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8000
         y: 0
         width: 2000
         height: 2000
@@ -235,7 +235,7 @@ TextureImporter:
       name: PearWalk_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 10000
         y: 0
         width: 2000
         height: 2000
@@ -256,8 +256,8 @@ TextureImporter:
       name: PearWalk_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 5
+        x: 12000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7
@@ -277,8 +277,8 @@ TextureImporter:
       name: PearWalk_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 5995
-        y: 5
+        x: 14000
+        y: 0
         width: 2000
         height: 2000
       alignment: 7

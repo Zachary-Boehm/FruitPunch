@@ -559,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4162154347922617057, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4231705996382904798, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_TargetGraphic
@@ -716,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 7213574718222398129, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229799733954841240, guid: 536d07fda5949664e859e7c53f973662, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8008834411144923328, guid: 536d07fda5949664e859e7c53f973662, type: 3}
       propertyPath: m_Controller

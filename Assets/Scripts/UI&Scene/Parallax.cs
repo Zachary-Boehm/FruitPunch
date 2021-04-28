@@ -8,6 +8,8 @@ public class Parallax : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Vector3 lastCameraPosition;
     [SerializeField] private Vector2 parallaxAmount;
+    [Range(0, 20)]
+    [SerializeField] private float speed = 10;
     void Start()
     {
         cameraTransform = Camera.main.transform; //Transform of the camera

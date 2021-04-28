@@ -19,7 +19,7 @@ public class WinLossController : MonoBehaviour
         Title.text = FAILURE;
         activeState = FAILURE;
         GameManager.GAMEMANAGER.stopMusic();
-        GameManager.GAMEMANAGER.playFX(SceneConstants.fxNames.getDefeat());
+        GameManager.GAMEMANAGER.playMusic(SceneConstants.fxNames.getDefeat());
         //Fade in the screen
         //animate the title
         //animate the buttons
@@ -32,7 +32,7 @@ public class WinLossController : MonoBehaviour
         Title.text = VICTORY;
         activeState = VICTORY;
         GameManager.GAMEMANAGER.stopMusic();
-        GameManager.GAMEMANAGER.playFX(SceneConstants.fxNames.getVictory());
+        GameManager.GAMEMANAGER.playMusic(SceneConstants.fxNames.getVictory());
         //Fade in the screen
         //animate the title
         //animate the buttons

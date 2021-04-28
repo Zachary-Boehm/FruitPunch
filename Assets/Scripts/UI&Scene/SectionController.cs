@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 public class SectionController : MonoBehaviour
 {
     [SerializeField] private Collider2D barrier;
@@ -9,19 +10,31 @@ public class SectionController : MonoBehaviour
     [SerializeField] private string AudioClip;
     [SerializeField] private GameObject[] enemies;
     [SerializeField] private GameObject[] itemsToTurnOn;
+    [SerializeField] private Image Arrow;
+    private void FixedUpdate() 
+    {
+        //Check for null elements and remove them
+        enemies = enemies.Where(x => x != null).ToArray();
+        if(enemies.Length == 0)
+        {
+            //If arrow is not currently shown
+            if(Arrow.enabled == false)
+            {
+                //show the arrow
+                Arrow.enabled = true;
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.isTrigger == false)
         {
-            //Check for null elements and remove them
-            enemies = enemies.Where(x => x != null).ToArray();
+            
             //Only allow the trigger to activate when all enemies are dead
             if (enemies.Length == 0)
             {
                 //Show an arrow on where the player can go
                 barrier.enabled = false;
-                GetComponent<SpriteRenderer>().enabled = true;
-
             }
         }
     }
