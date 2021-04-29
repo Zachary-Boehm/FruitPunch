@@ -65,9 +65,11 @@ public class Health : MonoBehaviour
             {
                 case "Player":
                     GameManager.GAMEMANAGER.failGame();
+                    GameManager.GAMEMANAGER.setCanMove(false);
                     break;
                 case "Watermelon Boss":
                     GameManager.GAMEMANAGER.winGame();
+                    GameManager.GAMEMANAGER.setCanMove(false);
                     break;
             }
         }

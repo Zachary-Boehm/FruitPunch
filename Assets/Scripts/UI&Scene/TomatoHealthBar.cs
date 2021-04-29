@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class TomatoHealthBar : MonoBehaviour
 {
-    private Slider Health;
+    [SerializeField]private Slider Health;
     [SerializeField]private Image TomatoState;
     [SerializeField]private Sprite[] TomatoStates;
+    [SerializeField] private TextMeshProUGUI healthNumber;
     private float good,damaged;
-    private void Awake() {
-      Health = GetComponent<Slider>();
+    private void Start() 
+    {
       good = .5f * Health.maxValue;
       damaged = .15f * Health.maxValue;
+      healthNumber.text = Health.value.ToString();
     }
     public void updateHealthImage()
     {
@@ -30,5 +32,10 @@ public class TomatoHealthBar : MonoBehaviour
                 TomatoState.sprite = TomatoStates[1];
             }
         }
+    }
+
+    public void updateHealthNumber()
+    {
+        healthNumber.text = Health.value.ToString();
     }
 }

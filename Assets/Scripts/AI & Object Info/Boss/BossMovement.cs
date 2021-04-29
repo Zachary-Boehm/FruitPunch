@@ -21,6 +21,10 @@ public class BossMovement : MonoBehaviour
         //int enemyTotal = 0;
         //enemyTotal = countEnemies();
         //Debug.Log(enemyTotal);
+
+        //Change sorting order based on y position
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+
         float enemyDistance = Vector3.Distance(transform.position, Player.position);
         if (true)
         {

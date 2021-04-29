@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
+        //Change sorting order based on y position
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+
         //inputs
         //Set the X of Velocity to the horizontal input * speed
         Velocity.x = Input.GetAxisRaw("Horizontal") * Variables.moveSpeed;

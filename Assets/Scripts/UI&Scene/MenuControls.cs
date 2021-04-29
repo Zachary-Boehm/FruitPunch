@@ -45,12 +45,12 @@ public class MenuControls : MonoBehaviour
         GameManager.GAMEMANAGER.playFX(fxName);
     }
 
-    public void toggleCredits()
+    public void toggleCredits(bool _state)
     {
-        GameManager.GAMEMANAGER.toggleCredits();
+        GameManager.GAMEMANAGER.toggleCredits(_state);
     }
-    public void toggleControls()
+    public void toggleControls(bool _state)
     {
-        GameManager.GAMEMANAGER.toggleControls();
+        GameManager.GAMEMANAGER.toggleControls(_state);
     }
 }

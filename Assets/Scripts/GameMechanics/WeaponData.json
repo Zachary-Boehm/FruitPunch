@@ -13,16 +13,16 @@
             "damageAffect": 4,
             "effectDuration": 0.0,
             "bleedAmount": 0.0,
-            "damage": 7.0,
+            "damage": 1.0,
             "attackDuration": 0.5,
-            "attackRange": 5
+            "attackRange": 4
         },
         {
             "name": "PearFist",
             "damageAffect": 4,
             "effectDuration": 0.0,
             "bleedAmount": 0.0,
-            "damage": 10.0,
+            "damage": 2.0,
             "attackDuration": 0.5,
             "attackRange": 9
         },
@@ -31,7 +31,7 @@
             "damageAffect": 4,
             "effectDuration": 0.0,
             "bleedAmount": 0.0,
-            "damage": 15.0,
+            "damage": 3.4,
             "attackDuration": 0.5,
             "attackRange": 10
         }

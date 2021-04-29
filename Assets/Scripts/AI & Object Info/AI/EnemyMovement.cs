@@ -18,6 +18,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float cooldown;
     void Update()
     {
+        //Change sorting order based on y position
+        GetComponent<SpriteRenderer>().sortingOrder = Mathf.RoundToInt(transform.position.y * 100f) * -1;
+
         float enemyDistance = Vector3.Distance(transform.position, Player.position);
         if (enemyDistance <= 30 && isChasing == false)
         {
@@ -26,7 +29,7 @@ public class EnemyMovement : MonoBehaviour
         if (isChasing == true && GameManager.GAMEMANAGER.getCanMove())
         {
             
-            if (enemyDistance >= MinDist && !GetComponent<ActorVariables>().isAttacking)
+            if (enemyDistance >= MinDist && GetComponent<ActorVariables>().isAttacking == false)
             {
                 Direction = (Player.position - transform.position).normalized;
                 movement = Direction * Variables.moveSpeed * Time.deltaTime;
@@ -45,6 +48,7 @@ public class EnemyMovement : MonoBehaviour
                         GetComponent<AnimationController>().ChangeAnim(SceneConstants.Punch);
                         StartCoroutine(attackCooldown());
                         canAttack = true;
+                        Variables.isAttacking = true;
                     }
                 }
             }

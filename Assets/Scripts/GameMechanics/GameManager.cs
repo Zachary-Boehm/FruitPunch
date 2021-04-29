@@ -229,14 +229,14 @@ public class GameManager : MonoBehaviour
         gameEndController.ActivateWin();
     }
 
-    public void toggleControls()
+    public void toggleControls(bool _state)
     {
-        Controls.enabled = !Controls.isActiveAndEnabled;
+        Controls.enabled = _state;
     }
 
-    public void toggleCredits()
+    public void toggleCredits(bool _state)
     {
-        Credits.enabled = !Credits.isActiveAndEnabled;
+        Credits.enabled = _state;
     }
     public void failGame()
     {
